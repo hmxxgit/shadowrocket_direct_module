@@ -48,8 +48,8 @@ def read_rules(path, allowed, policies=("DIRECT",)):
     return rules
 
 
-def verify_google_routing(rules):
-    """Check representative services and both former direct video regexes independently."""
+def verify_service_routing(rules):
+    """Check named services, CDN/API hosts and former direct video regexes independently."""
     samples = [
         "www.google.com", "www.google.com.hk", "www.google.cn", "gemini.google.com",
         "www.youtube.com", "youtubei.googleapis.com", "i.ytimg.com", "lh3.ggpht.com",
@@ -62,6 +62,20 @@ def verify_google_routing(rules):
         "www.googleapis-cn.com", "beacons.gvt2.com", "googleadservices.com",
         "www.googletagmanager-cn.com", "google-analytics.com", "doubleclick.net",
         "firebase-settings.crashlytics.com", "example.blogspot.com",
+        "x.com", "api.x.com", "api.twitter.com", "pbs.twimg.com", "t.co",
+        "github.com", "api.github.com", "raw.githubusercontent.com",
+        "objects.githubusercontent.com", "githubassets.com", "ghcr.io",
+        "github-cloud.s3.amazonaws.com", "copilot-proxy.githubusercontent.com",
+        "chatgpt.com", "chat.com", "api.openai.com", "codex.openai.com",
+        "ab.chatgpt.com", "cdn.oaistatic.com", "files.oaiusercontent.com",
+        "oaistatsig.com", "openaimerge.com", "sora.com",
+        "chatgpt-async-webps-prod-example-123.webpubsub.azure.com",
+        "openaiapi-site.azureedge.net", "auth.openai.com", "auth0.com",
+        "claude.ai", "api.anthropic.com", "cursor.com", "windsurf.com",
+        "api.perplexity.ai", "huggingface.co", "cdn-lfs.hf.co", "openrouter.ai",
+        "gitlab.com", "registry.npmjs.org", "pypi.org", "files.pythonhosted.org",
+        "registry-1.docker.io", "discord.com", "telegram.org", "reddit.com",
+        "instagram.com", "facebook.com", "linkedin.com",
     ]
     parsed = [next(csv.reader([line], strict=True)) for line in rules]
     for host in samples:
@@ -72,15 +86,15 @@ def verify_google_routing(rules):
                      (kind == "URL-REGEX" and re.search(value, "https://" + host + "/videoplayback")))
             if match:
                 matches.append((kind, value, policy))
-        require(matches and matches[0][2] == "PROXY", f"Google service does not route to PROXY: {host}")
+        require(matches and matches[0][2] == "PROXY", f"Overseas service does not route to PROXY: {host}")
         require(not any(policy == "DIRECT" and (kind, value) != ("DOMAIN-SUFFIX", "cn")
                         for kind, value, policy in matches),
-                f"Conflicting Google DIRECT rule remains: {host}")
+                f"Conflicting Overseas-service DIRECT rule remains: {host}")
     # Important mainland services retain their original direct domain routing.
     for host in ["qq.com", "taobao.com", "baidu.com", "cn"]:
         require(any(kind == "DOMAIN-SUFFIX" and value == host and policy == "DIRECT"
                     for kind, value, policy in parsed), f"Mainland direct rule missing: {host}")
-    print(f"PASS: {len(samples)} Google service/video routing cases and mainland direct rules.")
+    print(f"PASS: {len(samples)} Overseas service/video routing cases and mainland direct rules.")
 
 
 def validate():
@@ -92,13 +106,13 @@ def validate():
     require(len(upstream) == metadata["rule_count"], "Upstream count mismatch")
     result = read_rules(ROOT / "sr_direct_list.module", allowed | {"GEOIP"}, ("DIRECT", "PROXY"))
     proxy, direct, removed = module_rules()
-    require(result == proxy + direct + ["GEOIP,CN,DIRECT"], "Incorrect Google priority or unexpected rules")
+    require(result == proxy + direct + ["GEOIP,CN,DIRECT"], "Incorrect Service priority or unexpected rules")
     require(len(direct) + len(removed) == len(upstream), "Upstream partition mismatch")
-    verify_google_routing(result)
+    verify_service_routing(result)
     require((ROOT / "LICENSE-GPL-3.0").is_file(), "Missing upstream license")
     require((ROOT / "NOTICE.md").is_file(), "Missing attribution")
     counts = Counter(line.split(",", 1)[0] for line in result)
-    print(f"PASS: {len(result):,} rules; {len(proxy)} Google PROXY rules; {len(removed)} DIRECT conflicts removed; only [Rule].")
+    print(f"PASS: {len(result):,} rules; {len(proxy)} Overseas-service PROXY rules; {len(removed)} DIRECT conflicts removed; only [Rule].")
     print(dict(counts))
     print("Module SHA-256:", hashlib.sha256((ROOT / "sr_direct_list.module").read_bytes()).hexdigest())
 

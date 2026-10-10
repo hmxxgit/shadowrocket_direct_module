@@ -1,0 +1,319 @@
+{
+  "repository": "https://github.com/v2fly/domain-list-community",
+  "commit": "c6adacf29cc4fb05e04651fcf03e00989ef9f797",
+  "retrieved_date": "2026-10-10",
+  "license": "MIT",
+  "roots": [
+    "google",
+    "google-gemini",
+    "category-ai-!cn",
+    "category-social-media-!cn",
+    "github",
+    "gitlab",
+    "discord",
+    "telegram",
+    "reddit",
+    "docker",
+    "homebrew",
+    "python",
+    "stackexchange",
+    "rust",
+    "jetbrains",
+    "huggingface",
+    "anaconda",
+    "gitbook",
+    "readthedocs",
+    "sourcehut",
+    "codeberg"
+  ],
+  "files": {
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/LICENSE",
+      "sha256": "b9d84a22870d3f21c91a4c6e410c9cc51d00902f5233ad0c84011479244bf7d2"
+    },
+    "anaconda": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/anaconda",
+      "sha256": "36e3da771470bfe7ceeeb889cb147cc3292026efa6e177cdda7c1952c531f509"
+    },
+    "category-ai-!cn": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/category-ai-!cn",
+      "sha256": "e00dfeb8ef8be38094ebc26dc47a7ae8f8199a91565199b76efdcca81bd69cc2"
+    },
+    "category-social-media-!cn": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/category-social-media-!cn",
+      "sha256": "338ed36f18ed47b160d0517c8236d11038ba01176e0a56898c83012de0627997"
+    },
+    "codeberg": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/codeberg",
+      "sha256": "6034ca1f86c484afea313608e15b863c0b866f28798c31968eba636d0f0ff240"
+    },
+    "discord": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/discord",
+      "sha256": "6e57668fe3c87895036e1b35ce7110ea1872c41850e1e92258dc20517e3d6dc5"
+    },
+    "docker": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/docker",
+      "sha256": "f1b27237e9b861d88aaf80399af5088781e177780ecc7b30dd7795fea404546e"
+    },
+    "gitbook": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/gitbook",
+      "sha256": "c499aa4b82a2349035207f7f93b51b23893c0ec2b0326276a0630f0d0feb102b"
+    },
+    "github": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/github",
+      "sha256": "549a8bf61fd4a673a59e0a0f8794e66e5228d6a8bc759c6f4888a287e728ccc2"
+    },
+    "gitlab": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/gitlab",
+      "sha256": "43fe6cc0fa50703d37447938384445df08c8790cb4d834d16e99226b2f9be787"
+    },
+    "google": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google",
+      "sha256": "5a85d201b8fb4b03486515618da4c164a0ce0c59341cb2dee6d1b0bdca176653"
+    },
+    "google-gemini": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google-gemini",
+      "sha256": "30aff080b1a90df95d5cb2bbd32884b5d21f6231631f6ed869919d4fb073e4a6"
+    },
+    "homebrew": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/homebrew",
+      "sha256": "282792be8bebab73c3031f7c53f6cff11db391a19d431cced5c1b2ac2aa3478a"
+    },
+    "huggingface": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/huggingface",
+      "sha256": "67f5861b31232701f884efd38d9436dd89183fccbd01d6f10d791b9ef6fbf4b8"
+    },
+    "jetbrains": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/jetbrains",
+      "sha256": "e582f14220308511a9e584612d21fa01d76c552fcfba2838b4aeedd53adb17f7"
+    },
+    "python": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/python",
+      "sha256": "73627c3749fee63ccf12fbb4cb5da121fc0ef46b04ebf32d71211e0f82bfef8c"
+    },
+    "readthedocs": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/readthedocs",
+      "sha256": "13552b3acb4ccdc44f984ae7e79bf681da7fc617c281c55af40320e3e0833731"
+    },
+    "reddit": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/reddit",
+      "sha256": "c9a8f8d31c03484cad62527e65d47b101a657d3293b9adead66a2eecf80fbce9"
+    },
+    "rust": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/rust",
+      "sha256": "89c05ced69f7ae2243e598906a08319b36e63feec2105369620873e6c9583bdc"
+    },
+    "sourcehut": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/sourcehut",
+      "sha256": "8e506525231c0c2f9553d4dfc08bcb2e980eb57271a8abecda1cb0d5766941fe"
+    },
+    "stackexchange": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/stackexchange",
+      "sha256": "559e196adde4b2712519f05c893a4021332d66e07287c3ce24304f8b7923b4ff"
+    },
+    "telegram": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/telegram",
+      "sha256": "24a2d026dbf3a09a8ca893420a40adbad70328978df0100d9c63abecdbf01b5d"
+    },
+    "android": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/android",
+      "sha256": "1c90653035a7504b5d0b883f9090717ecfe23f8873aee75645071b1c461c4043"
+    },
+    "anthropic": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/anthropic",
+      "sha256": "bf48dc1b342bbfd06f2a93ee8ce180fc424d9c041dafd2d182ffb3f4186698b4"
+    },
+    "blogspot": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/blogspot",
+      "sha256": "9f9d2e0eba824d204812b0c64bee64ff1f4d4a4c838031f8f24c5f013e5e6063"
+    },
+    "bluesky": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/bluesky",
+      "sha256": "df24abe3de1472cf7366ec4687adb2b72922a5ee3ac8fc72d3c958f07c18e34a"
+    },
+    "bytedance-ai-!cn": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/bytedance-ai-!cn",
+      "sha256": "0048660c74ee0f493d281cb94d44052025b9a419e9320b5f472748b75b7711b1"
+    },
+    "cerebras": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/cerebras",
+      "sha256": "713ea33f6828bb2ac34db413204ea4ddb5d8740aef64e521f46f55fbc99d771d"
+    },
+    "comfy": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/comfy",
+      "sha256": "0199a140ca1be2d691c17a29f695173c344e83ef9187f321e53c0e8a0392c960"
+    },
+    "cursor": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/cursor",
+      "sha256": "963a78363ff86e87ae10859baa5f2dc7e3184efce13ac6e158bb2e698228bf5d"
+    },
+    "dart": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/dart",
+      "sha256": "8d4d744d1116638b4789c6502e3168e2c156d6a2747d9f1efd9028c502907a7b"
+    },
+    "elevenlabs": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/elevenlabs",
+      "sha256": "4c284a7e5947f4a40d40c9dc8fedf3e9e3091db0c7680b913b2b19db36ebd561"
+    },
+    "envato": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/envato",
+      "sha256": "07df2d1f56a06149222183b025dcdb2ef4db3eb49ea0a6d1ba864cbd260f6f3b"
+    },
+    "facebook": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/facebook",
+      "sha256": "bd860c04a95c82afa1aa86c166a50eb561a952c6915257f941fa6d58a0431da9"
+    },
+    "fastlane": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/fastlane",
+      "sha256": "c7917e6f926dfe2cbf63709aeeb7bbd397b349fe970467a097bbdd919c199861"
+    },
+    "firebase": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/firebase",
+      "sha256": "b28f423fdffbf5e6b67a179f21c322302837428d333fdcd85fa18767e50f31e9"
+    },
+    "flutter": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/flutter",
+      "sha256": "98e9bc2d286c8edb174f67e195a40b7278890cade98b89dc25842424376f38b8"
+    },
+    "github-copilot": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/github-copilot",
+      "sha256": "e41465e9e15430bf31d1054d21c0551e8fa3ef24431e317317f409511c64483c"
+    },
+    "golang": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/golang",
+      "sha256": "2c6febc8eceaa343fb8904840017f65123f30be28eea4c6f3d1a1ce50645b346"
+    },
+    "google-deepmind": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google-deepmind",
+      "sha256": "6a9195976e75c2b6adb255ec5cc4af6d8b66d0dd2a877437642deed6da244874"
+    },
+    "google-play": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google-play",
+      "sha256": "ea1a161c52a443b2c0a105f8a94bcfc86e5c8a267d483f34e53848b7310fc65e"
+    },
+    "google-registry": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google-registry",
+      "sha256": "a8060ed62f9ccb984b3099861d23a5f54cc51a5b26d5abddffd08924710d78dd"
+    },
+    "google-scholar": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google-scholar",
+      "sha256": "76eb1c15c0b4fc479d7a88f4f5065ab9de61c7711e3660f2f4f6dc5ff267a31f"
+    },
+    "google-trust-services": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google-trust-services",
+      "sha256": "09f22a4aac72092ddcdd8e91dbf444b905a6b5eecaede13f2ca5605968d63702"
+    },
+    "googlefcm": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/googlefcm",
+      "sha256": "6611d2b58eda9737b00e14cebdebb52918709df1fc8b39b95a2966b55a1cfc7b"
+    },
+    "groq": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/groq",
+      "sha256": "d779541783d4c835ad341a13ae3c3a008bfa3e535b46f79518b92bdef17588bb"
+    },
+    "instagram": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/instagram",
+      "sha256": "e392526b75e27218f874590d0db99b5e009fb0b7679095f0eac48a4ee3fb6413"
+    },
+    "jetbrains-ai": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/jetbrains-ai",
+      "sha256": "b1bb655fc82a45311745ef0513dc6889f76cb4bfc0cd9cd563788b5e502b6a53"
+    },
+    "kaggle": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/kaggle",
+      "sha256": "6257e9fe2594961ccccefa6b9d4a99fda236e9563a7274304303b9a2c63e911b"
+    },
+    "linkedin": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/linkedin",
+      "sha256": "f1656d12d3fddc2ff4f167798a77ef14dd45edb7a95b9e55b5b5e5f01280a274"
+    },
+    "liveperson": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/liveperson",
+      "sha256": "2e146391a816f4497b0a987f2d7edfb0e7e0e11ae450e47a4c0779a0868d7e22"
+    },
+    "manus": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/manus",
+      "sha256": "3fa777650b51936dd5f36c7f4763a025f2ed46570fbb4adc63e48eaaa14d1de5"
+    },
+    "misskey": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/misskey",
+      "sha256": "03dc89b9e0bc3b849af00fc4adb47a4be88e2cc9c1c2fa8abd00791c114b68d0"
+    },
+    "mixi": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/mixi",
+      "sha256": "c5b078f9191043b136d919d4419b22801597c816d704168be6f6b2d14ec96985"
+    },
+    "npmjs": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/npmjs",
+      "sha256": "674294756c3e5d7f20e274f7190f28b55eb373122513d0ab5e439e29dd03be53"
+    },
+    "ok": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/ok",
+      "sha256": "b0985772bca6c2d2e42544a1fe7cb50d455f4d28fb0faae286179a96214d65f1"
+    },
+    "openai": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/openai",
+      "sha256": "19a100966b3c5b0dff2e7038ba66366ef10d6384781b3eda6de4d1e79712dcc6"
+    },
+    "opensourceinsights": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/opensourceinsights",
+      "sha256": "f4ade2b230eaf9fa05b2f3ca20d72a24fe7248a876a020bd209921876c6febcd"
+    },
+    "perplexity": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/perplexity",
+      "sha256": "570581bad658566cb493207c14ebb55110750071071e089b4c40054b00af3db0"
+    },
+    "poe": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/poe",
+      "sha256": "e689a8d337b64bcf760e5d8dfe03e3d29d8558063db93acba2d1d6eb9c11003a"
+    },
+    "polymer": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/polymer",
+      "sha256": "fbb1cb902ab884deee928743f919fe5fed5a45a744bd0e034a4d219dd429df3e"
+    },
+    "threads": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/threads",
+      "sha256": "89e3c90ee1900445f0a0acab799d399d9999e39fefd9239b61efb4ac128f7851"
+    },
+    "twitter": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/twitter",
+      "sha256": "05fee908ab80f262be5f603b24d3bdaa60aee1005ccc1cec988bab9236061116"
+    },
+    "v8": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/v8",
+      "sha256": "036cbbd5578577f5571ec64cb5406e8ebd52bbe8ecdd9f72cebe234096052c66"
+    },
+    "vk": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/vk",
+      "sha256": "754ed6707edb6288ada21308197770c7b9b28ab94ae412afcf594d9b0534c708"
+    },
+    "windsurf": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/windsurf",
+      "sha256": "d6d082e40d180efbabde3b1a5bd8fe1bdc804f1a11b79d2128fe41e0b4dc4e16"
+    },
+    "xai": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/xai",
+      "sha256": "1e15c6018174f58f6a2f3710c84566909eee45a8092247280d244cf8ea7cd928"
+    },
+    "youmind": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/youmind",
+      "sha256": "a1a4dd677d58f48dead7421a94a46ddc34f87c76ff35c8322dcc952ac79d0f29"
+    },
+    "youtube": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/youtube",
+      "sha256": "9ffb657176fdffed567953749c137bb3d8a216ce4e839b3831b626c752902213"
+    },
+    "comfy-ui-launcher": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/comfy-ui-launcher",
+      "sha256": "1c33a3088de4e95eceb817db1b982b857a1c4b12c6724d230620745f298a918b"
+    },
+    "dola": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/dola",
+      "sha256": "f732a4248c3594bcfeaecae5629842c7ad72bb32aa297b6b6ffc27f4b96efc6f"
+    },
+    "misskey-universe": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/misskey-universe",
+      "sha256": "ee9ce376f579d61f11bf9d04f7d2a516f82c00ce5667976e33dc5584f316ca36"
+    }
+  }
+}
