@@ -1,0 +1,71 @@
+{
+  "repository": "https://github.com/v2fly/domain-list-community",
+  "commit": "c6adacf29cc4fb05e04651fcf03e00989ef9f797",
+  "retrieved_date": "2026-10-11",
+  "license": "MIT",
+  "roots": [
+    "bytedance"
+  ],
+  "files": {
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/LICENSE",
+      "sha256": "b9d84a22870d3f21c91a4c6e410c9cc51d00902f5233ad0c84011479244bf7d2"
+    },
+    "bytedance": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/bytedance",
+      "sha256": "f7084016918288fe58dbe18d862762a471c49e7e4f3c0b388a801d54f5448b4c"
+    },
+    "bytedance-ai-!cn": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/bytedance-ai-!cn",
+      "sha256": "0048660c74ee0f493d281cb94d44052025b9a419e9320b5f472748b75b7711b1"
+    },
+    "dongchedi": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/dongchedi",
+      "sha256": "9987640dcaa91d282ee03fa386fbe210a9bf462a2c08a711794060de99fa8c48"
+    },
+    "doubao": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/doubao",
+      "sha256": "b501f28fcaeca55a569c6193d12415ef6d62addbe6f8373799fc5c3005ad5db6"
+    },
+    "douyin": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/douyin",
+      "sha256": "4cc0f40fdf3b30314ce1739e24dc83ed1fe1df4eed7d43a44466b77a3bbd75db"
+    },
+    "fqnovel": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/fqnovel",
+      "sha256": "fa0568d86d40cd96ea13b116cd968d98e58b50c4c1c3ab275a446a3b4b64a940"
+    },
+    "juejin": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/juejin",
+      "sha256": "d4a602e7f55531283b135d1560dfcdcf5f869c0aa6b139f34f15efeeaa0483bf"
+    },
+    "lark": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/lark",
+      "sha256": "20c1ddb8428abdcb85a8f87bdbd0201117b55905efdc83ccbea768630a04204d"
+    },
+    "tiktok": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/tiktok",
+      "sha256": "e57322c704e4fe5ef3b202e4b86e82767fbe7f1af2c01f065fde4764205d0e4f"
+    },
+    "trae": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/trae",
+      "sha256": "fa41d9d1525899239d2fbf1496afa2b12f2f053cd43ef1a2462e98ac376b136f"
+    },
+    "volcengine": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/volcengine",
+      "sha256": "f1b522dde86d2b92d3d3ac28da16821222edc6d9aca45ecc9e6cf2861b401a2f"
+    },
+    "dola": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/dola",
+      "sha256": "f732a4248c3594bcfeaecae5629842c7ad72bb32aa297b6b6ffc27f4b96efc6f"
+    },
+    "feishu": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/feishu",
+      "sha256": "2af60550b0ee46ac2eae75b7bb9f2a5dbb3ff502dce2d24ba4db4c6e67bbaf85"
+    },
+    "lark-global": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/lark-global",
+      "sha256": "0af90bf857a3ba2ade97c2fda399700e86de2b498d67653c9ae05adfa74234bf"
+    }
+  }
+}

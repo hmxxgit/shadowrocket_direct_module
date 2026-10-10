@@ -7,7 +7,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
-from policy import MODULE, module_rules, ime_direct_rules
+from policy import MODULE, module_rules, priority_direct_rules
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -125,6 +125,39 @@ def verify_ime_routing(rules):
     print(f"PASS: {len(hosts)} IME API/voice/sync/download/monitoring routing cases.")
 
 
+def verify_bytedance_routing(rules):
+    # Check every collected direct domain and descendants against all proxy suffixes.
+    direct_domains = {line.split(",")[1] for line in priority_direct_rules()}
+    proxy_suffixes = {value for kind, value, policy in
+                      (next(csv.reader([line], strict=True)) for line in rules)
+                      if kind == "DOMAIN-SUFFIX" and policy == "PROXY"}
+    for domain in direct_domains:
+        labels = domain.split(".")
+        require(not any(".".join(labels[i:]) in proxy_suffixes for i in range(len(labels))),
+                f"Priority direct domain still matches a proxy suffix: {domain}")
+        require(not any(proxy.endswith("." + domain) for proxy in proxy_suffixes),
+                f"Child domain still configured as proxy: {domain}")
+    samples = [
+        "www.douyin.com", "www.doubao.com", "api.doubao.com", "api.douyin.com",
+        "www.iesdouyin.com", "p3.douyinpic.com", "v3.douyinvod.com",
+        "www.toutiao.com", "www.ixigua.com", "www.jianying.com", "www.jimeng.com",
+        "www.feishu.cn", "www.larksuite.com", "www.volcengine.com", "ark.volces.com",
+        "speech.bytedance.com", "imagex.bytedanceapi.com", "log.zijieapi.com",
+        "api.snssdk.com", "p3.pstatp.com", "lf.bytefcdn.com", "s.byteoversea.com",
+        "www.fanqienovel.com", "www.juejin.cn", "www.dongchedi.com",
+        "www.coze.com", "www.trae.ai", "www.dola.com", "www.marscode.com",
+        "www.tiktok.com", "api.tiktokv.com", "www.capcut.com",
+        "bytedance.map.fastly.net", "tiktokcdn.com.akamaized.net",
+    ]
+    parsed = [next(csv.reader([line], strict=True)) for line in rules]
+    for host in samples:
+        policy = next((policy for kind, value, policy in parsed
+                       if (kind == "DOMAIN" and host == value) or
+                       (kind == "DOMAIN-SUFFIX" and (host == value or host.endswith("." + value)))), None)
+        require(policy == "DIRECT", f"ByteDance service does not route DIRECT: {host}")
+    print(f"PASS: {len(samples)} ByteDance service cases; all {len(direct_domains)} priority direct suffixes conflict-free.")
+
+
 def validate():
     source = ROOT / "upstream/sr_direct_list.module"
     metadata = json.loads((ROOT / "upstream/source.json").read_text())
@@ -134,13 +167,14 @@ def validate():
     require(len(upstream) == metadata["rule_count"], "Upstream count mismatch")
     result = read_rules(MODULE, allowed | {"GEOIP"}, ("DIRECT", "PROXY"))
     proxy, direct, removed = module_rules()
-    ime = ime_direct_rules()
-    ime_set = set(ime)
-    direct = [rule for rule in direct if rule not in ime_set]
-    require(result == ime + proxy + direct + ["GEOIP,CN,DIRECT"], "Incorrect Service priority or unexpected rules")
-    require(len(direct) + len(removed) + len(set(ime).intersection(upstream)) == len(upstream), "Upstream partition mismatch")
+    priority = priority_direct_rules()
+    priority_set = set(priority)
+    direct = [rule for rule in direct if rule not in priority_set]
+    require(result == priority + proxy + direct + ["GEOIP,CN,DIRECT"], "Incorrect Service priority or unexpected rules")
+    require(len(direct) + len(removed) + len(priority_set.intersection(upstream)) == len(upstream), "Upstream partition mismatch")
     verify_service_routing(result)
     verify_ime_routing(result)
+    verify_bytedance_routing(result)
     require((ROOT / "LICENSE-GPL-3.0").is_file(), "Missing upstream license")
     require((ROOT / "NOTICE.md").is_file(), "Missing attribution")
     counts = Counter(line.split(",", 1)[0] for line in result)

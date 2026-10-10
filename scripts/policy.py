@@ -1,4 +1,4 @@
-"""Pinned overseas-service domain coverage and direct-rule conflict filtering."""
+"""Pinned service domain coverage with priority direct exceptions."""
 import csv
 import hashlib
 import json
@@ -26,20 +26,20 @@ def ime_direct_rules():
     return [f"DOMAIN-SUFFIX,{domain},DIRECT" for domain in domains]
 
 
-def proxy_domains():
-    metadata = json.loads((SERVICES / "source.json").read_text())
+def snapshot_domains(directory, extra=()):
+    metadata = json.loads((directory / "source.json").read_text())
     for name, info in metadata["files"].items():
-        actual = hashlib.sha256((SERVICES / name).read_bytes()).hexdigest()
+        actual = hashlib.sha256((directory / name).read_bytes()).hexdigest()
         if actual != info["sha256"]:
             raise ValueError(f"Service snapshot SHA-256 mismatch: {name}")
-    domains = set(EXTRA_DOMAINS)
+    domains = set(extra)
     visited = set()
 
     def expand(name):
         if name in visited:
             return
         visited.add(name)
-        for raw in (SERVICES / name).read_text().splitlines():
+        for raw in (directory / name).read_text().splitlines():
             line = raw.split("#", 1)[0].strip()
             if not line:
                 continue
@@ -63,6 +63,21 @@ def proxy_domains():
     # Remove redundant child domains; a suffix rule covers the parent and descendants.
     return sorted(d for d in domains if not any(
         ".".join(d.split(".")[i:]) in domains for i in range(1, len(d.split(".")))))
+
+
+def priority_direct_rules():
+    domains = {line.split(",")[1] for line in ime_direct_rules()}
+    domains.update(snapshot_domains(ROOT / "upstream/bytedance"))
+    domains = sorted(d for d in domains if not any(
+        ".".join(d.split(".")[i:]) in domains for i in range(1, len(d.split(".")))))
+    return [f"DOMAIN-SUFFIX,{domain},DIRECT" for domain in domains]
+
+
+def proxy_domains():
+    direct = {line.split(",")[1] for line in priority_direct_rules()}
+    return [domain for domain in snapshot_domains(SERVICES, EXTRA_DOMAINS)
+            if not any(".".join(domain.split(".")[i:]) in direct
+                       for i in range(len(domain.split("."))))]
 
 
 def conflicts_with_proxy(line, domains):
