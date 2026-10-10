@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check the published module's routing-only scope and snapshot integrity."""
 import csv
+from domestic import domestic_direct_rules, suffixes
 import hashlib
 import json
 import re
@@ -158,6 +159,37 @@ def verify_bytedance_routing(rules):
     print(f"PASS: {len(samples)} ByteDance service cases; all {len(direct_domains)} priority direct suffixes conflict-free.")
 
 
+def verify_domestic_routing(rules, added):
+    parsed = [line.split(',') for line in rules]
+    proxy = {value for kind, value, policy in parsed if policy == 'PROXY'}
+    added_set = set(added)
+    original = [line.split(',') for line in rules if line not in added_set]
+    original_suffixes = {value.lower() for kind, value, policy in original
+                         if kind == 'DOMAIN-SUFFIX' and policy == 'DIRECT'}
+    original_exact = {value.lower() for kind, value, policy in original
+                      if kind == 'DOMAIN' and policy == 'DIRECT'}
+    for line in added:
+        kind, domain, _ = line.split(',')
+        require(not any(d in original_suffixes for d in suffixes(domain)),
+                f'Already covered domestic addition: {domain}')
+        require(kind != 'DOMAIN' or domain not in original_exact, f'Duplicate exact domain: {domain}')
+        require(not any(d in proxy for d in suffixes(domain)), f'Domestic proxy conflict: {domain}')
+        require(kind != 'DOMAIN-SUFFIX' or not any(p.endswith('.' + domain) for p in proxy),
+                f'Domestic suffix contains proxy domain: {domain}')
+    hosts = ['wx.qq.com', 'szlong.weixin.qq.com', 'qzonestyle.gtimg.cn', 'ssl.ptlogin2.qq.com',
+             'res.wx.qq.com', 'support.weixin.qq.com', 'servicewechat.com', 'wechat.com',
+             'weixin.com', 'imqq.com', 'qqmail.com', 'qzone.com', 'idqqimg.com',
+             'myapp.com', 'tenpay.com', 'music.163.com', 'www.bilibili.com', 'www.kuaishou.com',
+             'www.meituan.com', 'www.jd.com', 'www.pinduoduo.com', 'www.zhihu.com',
+             'www.xiaohongshu.com', 'www.douban.com', 'www.dingtalk.com', 'www.taobao.com']
+    for host in hosts:
+        match = next((policy for kind, value, policy in parsed
+                      if (kind == 'DOMAIN' and host == value) or
+                      (kind == 'DOMAIN-SUFFIX' and (host == value or host.endswith('.' + value)))), None)
+        require(match == 'DIRECT', f'Domestic application does not route DIRECT: {host}')
+    print(f'PASS: {len(hosts)} domestic application routing cases; {len(added)} additions conflict-free.')
+
+
 def validate():
     source = ROOT / "upstream/sr_direct_list.module"
     metadata = json.loads((ROOT / "upstream/source.json").read_text())
@@ -170,8 +202,10 @@ def validate():
     priority = priority_direct_rules()
     priority_set = set(priority)
     direct = [rule for rule in direct if rule not in priority_set]
-    require(result == priority + proxy + direct + ["GEOIP,CN,DIRECT"], "Incorrect Service priority or unexpected rules")
+    domestic, stats = domestic_direct_rules()
+    require(result == priority + proxy + direct + domestic + ["GEOIP,CN,DIRECT"], "Incorrect Service priority or unexpected rules")
     require(len(direct) + len(removed) + len(priority_set.intersection(upstream)) == len(upstream), "Upstream partition mismatch")
+    verify_domestic_routing(result, domestic)
     verify_service_routing(result)
     verify_ime_routing(result)
     verify_bytedance_routing(result)

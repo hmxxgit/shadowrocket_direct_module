@@ -24,3 +24,9 @@
 ## 字节跳动服务直连
 
 2026-10-11 将 v2fly/domain-list-community 同一固定提交中的 `bytedance` 列表及全部递归依赖纳入优先直连，原始文件、MIT 许可与哈希保存在 `upstream/bytedance/`。包含国内和海外条目、广告与监控条目；抖音、豆包、头条、西瓜、剪映／CapCut、飞书／Lark、火山引擎、TikTok、Coze、TRAE、Dola 等已收录服务均走 `DIRECT`。将字节跳动域名从海外代理列表中剔除，合并输入法直连规则并去重，形成 923 条优先直连规则；共享 CDN 后缀下的其他服务也直连。
+
+## 国内应用直连补充
+
+2026-10-11 复用 [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community) 的腾讯（含微信、QQ）、阿里巴巴、百度、网易、哔哩哔哩、快手、美团、京东、拼多多、小米、华为、金山及国内社交／开发服务列表，固定提交同上。82 个原始文件（含递归依赖和 MIT 许可）保存在 `upstream/domestic/`，来源链接、根列表及 SHA-256 见 `source.json`。
+
+保留域名后缀和精确域名的原始匹配范围，展开 include 并应用属性筛选，排除 `@!cn` 海外条目；既有海外代理域名及其父／子域冲突条目不新增直连。2,248 条候选规则中，2,160 条已被现有直连规则覆盖，最终追加 88 条，无完全重复或新增代理冲突。发布模块共 113,734 条规则。构建及校验：`python3 scripts/build.py`、`python3 scripts/validate.py`。

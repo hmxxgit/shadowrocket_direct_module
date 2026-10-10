@@ -1,0 +1,352 @@
+{
+  "repository": "https://github.com/v2fly/domain-list-community",
+  "commit": "c6adacf29cc4fb05e04651fcf03e00989ef9f797",
+  "retrieved_date": "2026-10-11",
+  "license": "MIT",
+  "roots": [
+    "tencent",
+    "alibaba",
+    "baidu",
+    "netease",
+    "bilibili",
+    "kuaishou",
+    "meituan",
+    "jd",
+    "pinduoduo",
+    "xiaomi",
+    "huawei",
+    "kingsoft",
+    "category-social-media-cn",
+    "category-dev-cn"
+  ],
+  "files": {
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/LICENSE",
+      "sha256": "b9d84a22870d3f21c91a4c6e410c9cc51d00902f5233ad0c84011479244bf7d2"
+    },
+    "alibaba": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/alibaba",
+      "sha256": "f05b4013437f1805dd8283d5f7b163783551e128719ea097c840e4d4d810fd5c"
+    },
+    "baidu": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/baidu",
+      "sha256": "6e300f11f8fcc5ad5bdc51f8669f7680e6076d0c361f8ee745897c5a661f8ac3"
+    },
+    "bilibili": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/bilibili",
+      "sha256": "dbe560654836a368cf5c36ed3962f5fe983f07d0f160aa8ca7e48f63cbec527b"
+    },
+    "category-dev-cn": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/category-dev-cn",
+      "sha256": "8dfb6774c65489f5b8267f9a120053b2afcead16d1859a9f01b319c68ac22d8f"
+    },
+    "category-social-media-cn": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/category-social-media-cn",
+      "sha256": "6e887a371b307d20b0917db777243d8a57f1f5841512cb15b204f154f9e2bb0a"
+    },
+    "huawei": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/huawei",
+      "sha256": "5e2aa1cc680fea6594c17cf9e26111fe35be8283332e4dc2c3c1917aca335080"
+    },
+    "jd": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/jd",
+      "sha256": "da3188b01f825f549c553268d723f025a97969f50ee2a42821409d04e01c7eb5"
+    },
+    "kingsoft": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/kingsoft",
+      "sha256": "24e4b5f0917f09fa31f1f359743c3fabb2ca9b2beb6cb8e2459153b735f770c8"
+    },
+    "kuaishou": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/kuaishou",
+      "sha256": "e6df8faca7cd967eed30475a368a3c808b2c0614fc146a4c11e935c8d5e6619e"
+    },
+    "meituan": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/meituan",
+      "sha256": "83c6d9e67f918bd59080eaa0d8670dbf7009f38f00b5919131e1c473d6385b8f"
+    },
+    "netease": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/netease",
+      "sha256": "a6a89b93efe33f686bcd017c36e862f2bc5f5c269f5c6c1eb094f9cadbd8ec12"
+    },
+    "pinduoduo": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/pinduoduo",
+      "sha256": "34a408854534aecbe62286522b70be5cc6f630bfbaa7023890a2ab2c89f275df"
+    },
+    "tencent": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/tencent",
+      "sha256": "09042c7860e9173031fd264727ca30ce30b96cc04fe7850eb39dbd953dc2333a"
+    },
+    "xiaomi": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/xiaomi",
+      "sha256": "d5cd946c6081d139fc8906e25a1e025afadf70395209b7e29507458b122e019a"
+    },
+    "acfun": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/acfun",
+      "sha256": "a11480632f6a397e662e2867fa280f6bb8cb9b1b1b033aaae87c7e95edbdef48"
+    },
+    "aixcoder": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/aixcoder",
+      "sha256": "baa227227661be6bd98a7029a91b43a1e7b139c10cf7885d4cd2d0bb1d41189b"
+    },
+    "alibabacloud": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/alibabacloud",
+      "sha256": "c3f5597075cc3e4f1eb945ec508409709e6d5e09358e525d30423b4090082e96"
+    },
+    "aligames": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/aligames",
+      "sha256": "10febdc8fe88c2467af2f0db6e27b3b3ad7a7b964aeec89b93aa6e9e65d7bcd7"
+    },
+    "aliyun": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/aliyun",
+      "sha256": "fffd006a66b3ed1e1d4e3a20fe041628436df341aaee04f2dd2e7a14726045e0"
+    },
+    "aliyun-drive": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/aliyun-drive",
+      "sha256": "afaf7e01daf74c8d773dc944c7c073cdd18d8fc2730403333aafc8921bdd00c4"
+    },
+    "amap": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/amap",
+      "sha256": "9c9400a024d117fae4f2906286fc7f52e0e86b349af05b4972a490be47db4aee"
+    },
+    "apifox": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apifox",
+      "sha256": "2c70ac5f19a904ea2872a915e0d472be2e5afed7c2d81d74f0f5829bf7bd953c"
+    },
+    "apipost": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apipost",
+      "sha256": "b8b87dda290319437956cede8e911a6a1663f027928791448e3ce372957c8a64"
+    },
+    "baltamatica": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/baltamatica",
+      "sha256": "54c4921700e9bb67f1f85bcd874628614372dd3987a3247e95672f61d8743794"
+    },
+    "bilibili-cdn": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/bilibili-cdn",
+      "sha256": "13f3606396902e6b405afb3c8741ef3a1b574845f366a9181645acb57e60565d"
+    },
+    "bilibili-game": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/bilibili-game",
+      "sha256": "938c52a281731fde2d74020d6d5dc4a69cae004a0bac53705fc5dac4a093dd0b"
+    },
+    "cainiao": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/cainiao",
+      "sha256": "efc42d9bdde15761f2e873ab5dd536c1e8aa79833b496c33f1e2aeb358b3e15e"
+    },
+    "cheetahmobile": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/cheetahmobile",
+      "sha256": "0cdfdad505c20d5929d25b2b333ec7b35ebc5541c6c6899b6411fa107e55a062"
+    },
+    "cnblogs": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/cnblogs",
+      "sha256": "09ab519f865fce3579a3967f85f3ee509424674a9f4fbfa336547d780419b05e"
+    },
+    "coolapk": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/coolapk",
+      "sha256": "95fbab27a9e6d8571c11bcfb19ec4b64eb4e2a86613abe0883c2e2c344590131"
+    },
+    "csdn": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/csdn",
+      "sha256": "c0689048e1b371afbad868fc827b8f173cc1f63b696e17931f530176742d6e1e"
+    },
+    "ddmaicai": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/ddmaicai",
+      "sha256": "682030777391f701141444f1695b5086bc0716173de8768fa488771e422224ad"
+    },
+    "deepin": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/deepin",
+      "sha256": "17a59fc7f81d46c6930cab30d17880f9cd8f502c2f25eb329958632bc2ee02a8"
+    },
+    "dingtalk": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/dingtalk",
+      "sha256": "3e067a02023add491519aa6d0d6714b74e073c01e6572de42e01cca69582da45"
+    },
+    "douban": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/douban",
+      "sha256": "ab4a0ef43ce805b9426af74c339f78f9298fe43b1edb82f1f30b520bda3c5a0c"
+    },
+    "eleme": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/eleme",
+      "sha256": "1ef74dbcc0e5e1ce24b37c47e829b9b86a27e2c51fa10721e265f41092750760"
+    },
+    "goproxy": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/goproxy",
+      "sha256": "53018b8cddd36892a5ceac67221d518513911162210411f69e614ab0d23e3961"
+    },
+    "gracg": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/gracg",
+      "sha256": "c1391ea0de6a232c85625a7752d3b9b6c54f92a58709495c27cde3ec300d94d9"
+    },
+    "huawei-dev": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/huawei-dev",
+      "sha256": "3b17e4dfaa253a0fb20da9302fd64a24cb4a17be761b433b8a295cda669ce4b6"
+    },
+    "huaweicloud": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/huaweicloud",
+      "sha256": "c2359aeb62567baecc4514c48387553d62bff2fa1162e9e27374800c93a5f1c5"
+    },
+    "hupu": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/hupu",
+      "sha256": "4d9992bfc6f51d11db3ff8898a8592032aea397cff38d09fff1e6b7844fec566"
+    },
+    "juejin": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/juejin",
+      "sha256": "d4a602e7f55531283b135d1560dfcdcf5f869c0aa6b139f34f15efeeaa0483bf"
+    },
+    "kuaiyikeji": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/kuaiyikeji",
+      "sha256": "aeca8b223e37f14bf312dcb07bf61a24a961ab6acb2d728aed8bcf1439a04ec4"
+    },
+    "meipian": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/meipian",
+      "sha256": "f6981f2714b62223472a531085021875b261e87217115d1491c98377ac1303df"
+    },
+    "okjike": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/okjike",
+      "sha256": "3e274b4e1c3ab38f17073b18beadb33684c2a63804c129e67f3454e916084a0a"
+    },
+    "oschina": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/oschina",
+      "sha256": "654346e12a19ffbd56656a30ab739b8e4441841b8261fd67d2b2300432a6fb12"
+    },
+    "pgyer": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/pgyer",
+      "sha256": "787bfdaa660f3d3473e3f3f8c1d80e284a70f08857f78d63eab1d6c15b1a470d"
+    },
+    "pingcap": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/pingcap",
+      "sha256": "38426d2b2e01d1165d0f1b3455afd91b2c47127cf4960d40941ae0489f8550db"
+    },
+    "qcloud": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/qcloud",
+      "sha256": "3a18109f18f106a6dc6e35ec1466284547881fbf999687df4d863a2ca287b742"
+    },
+    "rubychina": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/rubychina",
+      "sha256": "4f9b4d88ae9d59493a8480aa97b98a0f7e4c002359f61640babd0148938badb0"
+    },
+    "seasun": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/seasun",
+      "sha256": "1b5483f72fb5f3e35ef05c19075668a1af2cc517226301d0f4a5c78bc5b1d363"
+    },
+    "segmentfault": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/segmentfault",
+      "sha256": "6c4d50668833ddcf25b62feab9764e49806d2c8adc578ce36d8cc7009bbbaae4"
+    },
+    "shuqi": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/shuqi",
+      "sha256": "4d2e3bcefd8a5a09e8e84b2c8ac806aed0bea65896f29dacbfd72fa4e42472b8"
+    },
+    "sina": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/sina",
+      "sha256": "dd016016fa2f45e1b8c3f91b42cdc2e0e0a20f85dcaf7d5bf137e111685a9ed6"
+    },
+    "sogou": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/sogou",
+      "sha256": "fe0b530a520f73c4e99f5d313820edc49c1808d968723ba9622688e7b4dc30d1"
+    },
+    "sxl": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/sxl",
+      "sha256": "26d0470f15ac1c1dabb0b8b4a57e09e85df856dadf0bdf4c19147eb3db3a8188"
+    },
+    "teambition": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/teambition",
+      "sha256": "bc3b8f436b6d2d6b2ea56ec2f8e1ce384e68ad347a49d1fe95cbef37eb5106b6"
+    },
+    "tencent-dev": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/tencent-dev",
+      "sha256": "81f3e023a92a0b202d872951ff359cc78c89ea16056d538607d90752c53810cf"
+    },
+    "tencent-games": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/tencent-games",
+      "sha256": "9a70f0f1d68301b27b689e84b91ef4dca54e1e9d0afa69aafecf7d524a8e77c2"
+    },
+    "tencent-tme": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/tencent-tme",
+      "sha256": "dfd56c2f5abb8976d5793da6895c923979de546eb2216cc2686957bfbbc6f1d8"
+    },
+    "ubuntukylin": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/ubuntukylin",
+      "sha256": "277a7bdbea2b2a072a61e464c9585ca5217213f8542b2d751736fae1dbfd3011"
+    },
+    "uc": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/uc",
+      "sha256": "e78c4bdd1ecceaa4d3a88724799666545537eab02806df8fc604dae5cd30bfff"
+    },
+    "umeng": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/umeng",
+      "sha256": "6b48586a17aedbc00b6ab75ff7015b85dfe91084f029e3b0928a3ecd43a4d1cc"
+    },
+    "unitychina": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/unitychina",
+      "sha256": "2530c60a7020453cab561ab5f9d67a5841fd812574c60677622343c536f78cd8"
+    },
+    "wps": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/wps",
+      "sha256": "6749064762e9b1d6f4a0c4defe2023b72b26da5329bf57dd628b6036d0b46607"
+    },
+    "xiaohongshu": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/xiaohongshu",
+      "sha256": "c02829a3660e6ddcc24e53a86b33735accf42613d493757564b59d217a06065d"
+    },
+    "xiaomi-ai": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/xiaomi-ai",
+      "sha256": "d7a2cf95e5143e680857bb95ac20c4023a649b8c6e51c239736ee4f7ec2c811a"
+    },
+    "xiaomi-iot": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/xiaomi-iot",
+      "sha256": "7a8f37cd756155596763bdca5674c1656512002ccc9e51227ed7d1b5318855a8"
+    },
+    "youku": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/youku",
+      "sha256": "b63643e7a86a9fe844a952f06289efa42735fbf16e8b24fe72bc3e14533dcfdb"
+    },
+    "yuewen": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/yuewen",
+      "sha256": "3668db1d6a6368467dd74fdfd40669a17c626f9e7693d560686b590ec2103c69"
+    },
+    "zhihu": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/zhihu",
+      "sha256": "d7a8012fea2dbec0f3487866a391cff6e758c5570bde76015aa8cddc75ca135d"
+    },
+    "askdiandian": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/askdiandian",
+      "sha256": "8b69aa06de192f92f60807fd62b72fe5303bfd8dd4d15c0f42401b7d6286cc7f"
+    },
+    "cnb": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/cnb",
+      "sha256": "27398c68a2859a73a1caed043703cc67ce21c0e810a917d8d74313d7efb2adec"
+    },
+    "coding": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/coding",
+      "sha256": "d9234e15d8ed2692b048a8d99f6a1982f32bfef21e0e5e7a184165386e071d41"
+    },
+    "discuz": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/discuz",
+      "sha256": "8857d54063131f453702e618e900540c8f3239cf4d0e80a80f35b419d7ef1821"
+    },
+    "dnspod": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/dnspod",
+      "sha256": "b6a8c430eceb4f228cfe7fc184b1a5c98472f0bb49a5a9de6fec07967711419d"
+    },
+    "gitee": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/gitee",
+      "sha256": "ef6cbcfbd1fac4fe8890c146688b777018046567e4fec3ed12db0c6a39b96b91"
+    },
+    "kugou": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/kugou",
+      "sha256": "5e62419673a2c2989e9a8fdbf61c72b98f0fe5659fad5576ab014becf47026a8"
+    },
+    "kuwo": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/kuwo",
+      "sha256": "ce24cdd3c4f01f5d6a3f010fb667d36d6188a1e5d9033cc96e99743fe19d0caa"
+    },
+    "webnovel": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/webnovel",
+      "sha256": "5a68013cc22f857ebd369f0b9a284766342be5873790a765f6b441fe8b1955d4"
+    },
+    "ximalaya": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/ximalaya",
+      "sha256": "5050e8e11daaadbb117590abaf5dfa55be3103fed8820a2abb67778dfcab20b3"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Shadowrocket 分流模块
 
-字节跳动服务（抖音、豆包、头条、剪映、飞书、火山引擎、TikTok、Coze、TRAE 等）及相关域名、微信输入法优先直连。Google、YouTube、X／Twitter、GitHub、ChatGPT、Gemini、Codex 等已收录服务及相关域名走代理；其余保留上游直连规则，并补充大陆 GeoIP 直连。未命中流量沿用原配置。
+微信、QQ、淘宝、京东、网易、哔哩哔哩等国内应用直连；字节跳动全系服务及微信输入法优先直连。Google、YouTube、X／Twitter、GitHub、ChatGPT、Gemini、Codex 等已收录服务及相关域名走代理；其余保留上游直连规则，并补充大陆 GeoIP 直连。未命中流量沿用原配置。
 
 ## 导入链接
 
