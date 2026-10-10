@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+MODULE = ROOT / "sr_routing.module"
 SERVICES = ROOT / "upstream/proxy-services"
 # Supplemental service roots and shared login/experimentation/WebSocket infrastructure.
 EXTRA_DOMAINS = {"dns.google", "recaptcha.net", "recaptcha-cn.net", "googleflights.net",

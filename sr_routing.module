@@ -1,5 +1,6 @@
-#!name=中国大陆直连（海外服务强制代理）
-#!desc=Google/YouTube/X/GitHub/ChatGPT/Codex 等海外服务优先 PROXY；移除相关上游直连规则，保留其余直连规则并补充大陆 GeoIP；无脚本/解密。
+#!name=大陆直连与海外服务代理
+#!desc=分流模块：Google/YouTube/X/GitHub/ChatGPT/Gemini/Codex 等服务优先代理，其余保留上游直连并补充大陆 GeoIP；无脚本/解密。
+#!url=https://raw.githubusercontent.com/hmxxgit/shadowrocket_direct_module/main/sr_routing.module
 #!homepage=https://github.com/hmxxgit/shadowrocket_direct_module
 # Derived from GMOogway/shadowrocket-rules; GPL-3.0 (see LICENSE-GPL-3.0).
 # Upstream commit: 12fb8a1e037502a536f86ec9faf1cdbb2c576a48

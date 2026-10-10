@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """Build the static module from reviewed, pinned snapshots."""
 import json
-from policy import ROOT, module_rules
+from policy import ROOT, MODULE, module_rules
 
 
 def build():
     metadata = json.loads((ROOT / "upstream/source.json").read_text())
     proxy, direct, removed = module_rules()
     header = (
-        "#!name=中国大陆直连（海外服务强制代理）\n"
-        "#!desc=Google/YouTube/X/GitHub/ChatGPT/Codex 等海外服务优先 PROXY；移除相关上游直连规则，保留其余直连规则并补充大陆 GeoIP；无脚本/解密。\n"
+        "#!name=大陆直连与海外服务代理\n"
+        "#!desc=分流模块：Google/YouTube/X/GitHub/ChatGPT/Gemini/Codex 等服务优先代理，其余保留上游直连并补充大陆 GeoIP；无脚本/解密。\n"
+        "#!url=https://raw.githubusercontent.com/hmxxgit/shadowrocket_direct_module/main/sr_routing.module\n"
         "#!homepage=https://github.com/hmxxgit/shadowrocket_direct_module\n"
         "# Derived from GMOogway/shadowrocket-rules; GPL-3.0 (see LICENSE-GPL-3.0).\n"
         f"# Upstream commit: {metadata['commit']}\n"
@@ -23,7 +24,7 @@ def build():
             "\n\n# Reviewed upstream direct rules, excluding overseas-service conflicts.\n" +
             "\n".join(direct) +
             "\n\n# Mainland China IP fallback, using Shadowrocket's GeoIP database.\nGEOIP,CN,DIRECT\n")
-    (ROOT / "sr_direct_list.module").write_text(text, encoding="utf-8")
+    MODULE.write_text(text, encoding="utf-8")
     print(f"Built: {len(proxy)} overseas-service PROXY rules; removed {len(removed)} conflicting DIRECT rules.")
 
 

@@ -7,7 +7,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
-from policy import module_rules
+from policy import MODULE, module_rules
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -104,7 +104,7 @@ def validate():
     allowed = {"DOMAIN", "DOMAIN-SUFFIX", "URL-REGEX"}
     upstream = read_rules(source, allowed)
     require(len(upstream) == metadata["rule_count"], "Upstream count mismatch")
-    result = read_rules(ROOT / "sr_direct_list.module", allowed | {"GEOIP"}, ("DIRECT", "PROXY"))
+    result = read_rules(MODULE, allowed | {"GEOIP"}, ("DIRECT", "PROXY"))
     proxy, direct, removed = module_rules()
     require(result == proxy + direct + ["GEOIP,CN,DIRECT"], "Incorrect Service priority or unexpected rules")
     require(len(direct) + len(removed) == len(upstream), "Upstream partition mismatch")
@@ -114,7 +114,7 @@ def validate():
     counts = Counter(line.split(",", 1)[0] for line in result)
     print(f"PASS: {len(result):,} rules; {len(proxy)} Overseas-service PROXY rules; {len(removed)} DIRECT conflicts removed; only [Rule].")
     print(dict(counts))
-    print("Module SHA-256:", hashlib.sha256((ROOT / "sr_direct_list.module").read_bytes()).hexdigest())
+    print("Module SHA-256:", hashlib.sha256(MODULE.read_bytes()).hexdigest())
 
 
 if __name__ == "__main__":
