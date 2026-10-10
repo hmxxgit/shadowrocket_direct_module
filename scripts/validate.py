@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Check the published module's routing-only scope and snapshot integrity."""
 import csv
+import ipaddress
+from johnshall import johnshall_direct_rules
 from domestic import domestic_direct_rules, suffixes
 import hashlib
 import json
@@ -41,6 +43,10 @@ def read_rules(path, allowed, policies=("DIRECT",)):
         elif kind == "URL-REGEX":
             require(value.startswith("^https?"), f"{path.name}:{number}: unexpected regex")
             re.compile(value)
+        elif kind in {"IP-CIDR", "IP-CIDR6"}:
+            network = ipaddress.ip_network(value, strict=True)
+            require(network.version == (6 if kind == "IP-CIDR6" else 4), "Wrong IP rule type")
+            require(network.is_private or network.is_link_local or network.is_loopback, "Unexpected public IP direct range")
         else:
             require(value == "CN", f"{path.name}:{number}: non-mainland GeoIP")
         rules.append(line)
@@ -190,6 +196,39 @@ def verify_domestic_routing(rules, added):
     print(f'PASS: {len(hosts)} domestic application routing cases; {len(added)} additions conflict-free.')
 
 
+def verify_johnshall_routing(rules, added, stats):
+    parsed = [line.split(',') for line in rules]
+    added_set = set(added)
+    previous = [line.split(',') for line in rules if line not in added_set]
+    direct_suffixes = {value for kind, value, policy in previous
+                       if kind == 'DOMAIN-SUFFIX' and policy == 'DIRECT'}
+    proxy_suffixes = {value for kind, value, policy in previous if policy == 'PROXY'}
+    for line in added:
+        kind, domain, _ = line.split(',')
+        if kind not in {'DOMAIN', 'DOMAIN-SUFFIX'}:
+            continue
+        require(not any(d in direct_suffixes for d in suffixes(domain)),
+                f'Johnshall addition already covered: {domain}')
+        require(not any(d in proxy_suffixes for d in suffixes(domain)),
+                f'Johnshall addition conflicts with proxy: {domain}')
+        require(kind != 'DOMAIN-SUFFIX' or not any(p.endswith('.' + domain) for p in proxy_suffixes),
+                f'Johnshall suffix contains proxy service: {domain}')
+        for host in [domain, 'routing-check.' + domain] if kind == 'DOMAIN-SUFFIX' else [domain]:
+            first = next((policy for rule_kind, value, policy in parsed
+                          if (rule_kind == 'DOMAIN' and host == value) or
+                          (rule_kind == 'DOMAIN-SUFFIX' and (host == value or host.endswith('.' + value))) or
+                          (rule_kind == 'URL-REGEX' and re.search(value, 'https://' + host + '/'))), None)
+            require(first == 'DIRECT', f'Johnshall domain fails routing: {host}')
+    for address in ['10.1.2.3', '127.0.0.1', '172.20.0.1', '192.168.1.1', '::1', 'fd00::1', 'fe80::1']:
+        ip = ipaddress.ip_address(address)
+        require(any(ip in ipaddress.ip_network(value) for kind, value, policy in parsed
+                    if kind in {'IP-CIDR', 'IP-CIDR6'} and policy == 'DIRECT' and
+                    ip.version == (6 if kind == 'IP-CIDR6' else 4)), f'Local IP direct rule missing: {address}')
+    require(sum(stats[k] for k in ['covered', 'redundant', 'proxy_conflicts', 'added']) == stats['candidates'],
+            'Johnshall import accounting mismatch')
+    print(f'PASS: all {len(added)} Johnshall additions deduplicated and conflict-free; domain/subdomain and 7 local IP routing cases.')
+
+
 def validate():
     source = ROOT / "upstream/sr_direct_list.module"
     metadata = json.loads((ROOT / "upstream/source.json").read_text())
@@ -197,14 +236,16 @@ def validate():
     allowed = {"DOMAIN", "DOMAIN-SUFFIX", "URL-REGEX"}
     upstream = read_rules(source, allowed)
     require(len(upstream) == metadata["rule_count"], "Upstream count mismatch")
-    result = read_rules(MODULE, allowed | {"GEOIP"}, ("DIRECT", "PROXY"))
+    result = read_rules(MODULE, allowed | {"GEOIP", "IP-CIDR", "IP-CIDR6"}, ("DIRECT", "PROXY"))
     proxy, direct, removed = module_rules()
     priority = priority_direct_rules()
     priority_set = set(priority)
     direct = [rule for rule in direct if rule not in priority_set]
     domestic, stats = domestic_direct_rules()
-    require(result == priority + proxy + direct + domestic + ["GEOIP,CN,DIRECT"], "Incorrect Service priority or unexpected rules")
+    johnshall, johnshall_stats, conflicts = johnshall_direct_rules()
+    require(result == priority + proxy + direct + domestic + johnshall + ["GEOIP,CN,DIRECT"], "Incorrect Service priority or unexpected rules")
     require(len(direct) + len(removed) + len(priority_set.intersection(upstream)) == len(upstream), "Upstream partition mismatch")
+    verify_johnshall_routing(result, johnshall, johnshall_stats)
     verify_domestic_routing(result, domestic)
     verify_service_routing(result)
     verify_ime_routing(result)

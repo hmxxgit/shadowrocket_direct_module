@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build the static module from reviewed, pinned snapshots."""
 import json
+from johnshall import johnshall_direct_rules
 from domestic import domestic_direct_rules
 from policy import ROOT, MODULE, module_rules, priority_direct_rules
 
@@ -9,6 +10,7 @@ def build():
     metadata = json.loads((ROOT / "upstream/source.json").read_text())
     proxy, direct, removed = module_rules()
     domestic, stats = domestic_direct_rules()
+    johnshall, johnshall_stats, _ = johnshall_direct_rules()
     priority = priority_direct_rules()
     priority_set = set(priority)
     direct = [rule for rule in direct if rule not in priority_set]
@@ -30,8 +32,10 @@ def build():
             "\n\n# Reviewed upstream direct rules, excluding overseas-service conflicts.\n" +
             "\n".join(direct) +
             "\n\n# Additional domestic application domains from pinned v2fly lists.\n" + "\n".join(domestic) +
+            "\n\n# Explicit DIRECT rules adapted from Johnshall (CC BY-SA 4.0); see upstream/johnshall/.\n" + "\n".join(johnshall) +
             "\n\n# Mainland China IP fallback, using Shadowrocket's GeoIP database.\nGEOIP,CN,DIRECT\n")
     print("Domestic import:", stats)
+    print("Johnshall import:", johnshall_stats)
     MODULE.write_text(text, encoding="utf-8")
     print(f"Built: {len(priority)} priority ByteDance/IME DIRECT rules; {len(proxy)} overseas-service PROXY rules; removed {len(removed)} conflicting DIRECT rules.")
 

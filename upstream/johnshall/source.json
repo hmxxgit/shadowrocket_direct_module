@@ -1,0 +1,29 @@
+{
+  "repository": "https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever",
+  "authors": [
+    "Moshel",
+    "Johnshall"
+  ],
+  "commit": "d245e4dc6ca3628988f4f1430ecd1f034789344d",
+  "retrieved_date": "2026-10-11",
+  "license": "CC-BY-SA-4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "roots": [
+    "sr_top500_whitelist.conf",
+    "sr_cnip.conf"
+  ],
+  "files": {
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/d245e4dc6ca3628988f4f1430ecd1f034789344d/LICENSE",
+      "sha256": "626ea4883bb8c9289cbfd7d335d17ab72dbb973d9893a5d0ea1a3bc2effa7e32"
+    },
+    "sr_top500_whitelist.conf": {
+      "url": "https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/d245e4dc6ca3628988f4f1430ecd1f034789344d/sr_top500_whitelist.conf",
+      "sha256": "18f13a25a31de07d441ced5167490a62836499e18c35ab027b65f66226b6e23b"
+    },
+    "sr_cnip.conf": {
+      "url": "https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/d245e4dc6ca3628988f4f1430ecd1f034789344d/sr_cnip.conf",
+      "sha256": "b690513685938d955e39bdbc4ebd150db5442cdb7c9755a757ed0ba2266c5f71"
+    }
+  }
+}

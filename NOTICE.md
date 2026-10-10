@@ -30,3 +30,9 @@
 2026-10-11 复用 [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community) 的腾讯（含微信、QQ）、阿里巴巴、百度、网易、哔哩哔哩、快手、美团、京东、拼多多、小米、华为、金山及国内社交／开发服务列表，固定提交同上。82 个原始文件（含递归依赖和 MIT 许可）保存在 `upstream/domestic/`，来源链接、根列表及 SHA-256 见 `source.json`。
 
 保留域名后缀和精确域名的原始匹配范围，展开 include 并应用属性筛选，排除 `@!cn` 海外条目；既有海外代理域名及其父／子域冲突条目不新增直连。2,248 条候选规则中，2,160 条已被现有直连规则覆盖，最终追加 88 条，无完全重复或新增代理冲突。发布模块共 113,734 条规则。构建及校验：`python3 scripts/build.py`、`python3 scripts/validate.py`。
+
+## Johnshall 直连规则补充
+
+2026-10-11 复用 [Johnshall/Shadowrocket-ADBlock-Rules-Forever](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever) 的 `sr_top500_whitelist.conf` 和 `sr_cnip.conf` 中明确标为 DIRECT 的条目（作者署名 Moshel、Johnshall，项目源自 h2y/Shadowrocket-ADBlock-Rules）。固定提交 `d245e4dc6ca3628988f4f1430ecd1f034789344d`；未修改的配置、许可声明、来源链接与 SHA-256 保存在 `upstream/johnshall/`。上游按 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 发布，原始快照沿用其许可；本模块的改编按 GPL-3.0 发布，参见 [Creative Commons 兼容许可说明](https://creativecommons.org/compatible-licenses/)。
+
+提取 386 条不同的直连规则，其中 53 条已有覆盖，10 条与现有代理域名范围重叠而不追加（`blog.google`、`cloudflare.com`、`cn`、`forms.gle`、`microsoft.com`、`storage.googleapis.com`、`themeforest.net`、`tools.google.com`、`vk.com`、`zendesk.com`）。新增 316 条域名后缀直连和 7 条局域网／本机 IP 直连；将原配置中 IPv6 的 IP-CIDR 写法规范为 IP-CIDR6。保留原始域名匹配范围，新增规则在海外服务代理规则之后。包含上游白名单中的国内、学术、Apple CDN 及其他海外网站条目；不移植 General、DNS、广告过滤、解密、回国规则或 FINAL 默认路由。模块现共 114,057 条规则。

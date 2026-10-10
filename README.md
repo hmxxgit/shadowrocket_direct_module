@@ -1,6 +1,6 @@
 # Shadowrocket 分流模块
 
-微信、QQ、淘宝、京东、网易、哔哩哔哩等国内应用直连；字节跳动全系服务及微信输入法优先直连。Google、YouTube、X／Twitter、GitHub、ChatGPT、Gemini、Codex 等已收录服务及相关域名走代理；其余保留上游直连规则，并补充大陆 GeoIP 直连。未命中流量沿用原配置。
+微信、QQ、淘宝、京东、网易、哔哩哔哩等国内应用直连；字节跳动全系服务及微信输入法优先直连。Google、YouTube、X／Twitter、GitHub、ChatGPT、Gemini、Codex 等已收录服务及相关域名走代理；补充学术网站、Apple CDN 和局域网直连，保留上游直连及大陆 GeoIP 规则。未命中流量沿用原配置。
 
 ## 导入链接
 
@@ -16,4 +16,4 @@ https://raw.githubusercontent.com/hmxxgit/shadowrocket_direct_module/main/sr_rou
 
 模块不提供节点。更新时重新下载模块。
 
-规则来源：[GMOogway](https://github.com/GMOogway/shadowrocket-rules)、[v2fly](https://github.com/v2fly/domain-list-community)。来源及许可见 [NOTICE.md](NOTICE.md)。
+规则来源：[GMOogway](https://github.com/GMOogway/shadowrocket-rules)、[v2fly](https://github.com/v2fly/domain-list-community)、[Johnshall](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever)。来源及许可见 [NOTICE.md](NOTICE.md)。
