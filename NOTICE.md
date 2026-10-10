@@ -16,7 +16,3 @@
 海外服务代理域名列表来自 [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)，固定提交 `c6adacf29cc4fb05e04651fcf03e00989ef9f797`，许可为 MIT（Copyright (c) 2018-2019 V2Ray），全文保留于 `upstream/proxy-services/LICENSE`。
 
 原始 Google／Gemini、海外 AI、海外社交媒体及开发／通讯服务列表和所有递归依赖未经修改地保存在 `upstream/proxy-services/`，来源链接及 SHA-256 见该目录的 `source.json`。构建时展开依赖，保留全部属性条目，转换为域名后缀代理规则、去除冗余子域，并补充少量服务根域和 OpenAI 相关认证、实验服务域名。Google Play 的两个正则由整个下载域名覆盖；ChatGPT 的动态 WebSocket 正则由共享后缀 `webpubsub.azure.com` 的代理规则覆盖。发布模块仍按 GPL-3.0 分发。
-
-## 旧发布入口兼容
-
-根目录 `sr_direct_list.module` 按提交 `3e46d2542e4d2785a88c461b2f559a7af0b65a66` 中的改名前版本原样保留，供已有链接继续使用。该派生文件仍适用上述 GPL-3.0 及 MIT 来源说明。新版发布为 `sr_routing.module`，构建脚本不改写旧文件；旧文件来源提交与 SHA-256 记录在 `upstream/legacy-module.json`。
