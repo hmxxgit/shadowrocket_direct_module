@@ -7,6 +7,12 @@
 - 获取及修改日期：2026-10-10（Asia/Shanghai）
 - 上游许可：GNU General Public License v3.0，原文保存在 `LICENSE-GPL-3.0`。
 
-本项目对发布的 `sr_direct_list.module` 更改名称、说明、主页和来源注释，并在全部上游规则之后增加 `GEOIP,CN,DIRECT`。这个派生模块以及上游快照按 GPL-3.0 分发；完整可编辑规则、补充规则和构建方式均在本仓库公开。
+本项目对发布的 `sr_direct_list.module` 更改名称、说明、主页和来源注释；移除 120 条 Google 相关直连规则，在最前面增加 844 条 Google 服务 `PROXY` 规则，并在其余上游直连规则之后增加 `GEOIP,CN,DIRECT`。这个派生模块以及上游快照按 GPL-3.0 分发；完整可编辑规则、补充规则和构建方式均在本仓库公开。
 
 仓库原有 `LICENSE`（MIT，Copyright (c) 2026 答案在书里）保留，适用于本项目自行编写的构建/校验脚本和文档；不替代上述上游及派生模块的 GPL-3.0 许可。
+
+## Google 域名来源
+
+Google 代理域名列表来自 [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)，固定提交 `c6adacf29cc4fb05e04651fcf03e00989ef9f797`，许可为 MIT（Copyright (c) 2018-2019 V2Ray），全文保留于 `upstream/google/LICENSE`。
+
+原始 Google、Gemini 列表及所有递归依赖未经修改地保存在 `upstream/google/`，来源链接及 SHA-256 见该目录的 `source.json`。构建时展开依赖，保留全部属性条目，转换为域名后缀代理规则、去除冗余子域，并补充少量 Google 服务根域。Google Play 的两个正则由整个下载域名的代理规则覆盖。发布模块仍按 GPL-3.0 分发。
