@@ -16,7 +16,9 @@ https://raw.githubusercontent.com/hmxxgit/shadowrocket_direct_module/main/sr_rou
 
 [打开 / 下载模块](https://raw.githubusercontent.com/hmxxgit/shadowrocket_direct_module/main/sr_routing.module)
 
-发布文件已由 `sr_direct_list.module` 更名为 **`sr_routing.module`**。保留 `.module` 扩展名，仍从 Shadowrocket 的模块入口导入。完整静态文件，导入时无需再下载第三方规则集。
+新版发布入口为 **`sr_routing.module`**。保留 `.module` 扩展名，仍从 Shadowrocket 的模块入口导入。完整静态文件，导入时无需再下载第三方规则集。
+
+旧入口 [`sr_direct_list.module`](https://raw.githubusercontent.com/hmxxgit/shadowrocket_direct_module/main/sr_direct_list.module) 继续保留，内容按改名前的提交 `3e46d25` 原样恢复，不随新版构建改写或删除，已有使用者可以继续使用。该历史版本也包含海外服务代理规则，并非纯直连版。新安装及后续规则更新使用上面的新版链接。
 
 ## 在 Shadowrocket 中使用
 
@@ -49,6 +51,8 @@ https://raw.githubusercontent.com/hmxxgit/shadowrocket_direct_module/main/sr_rou
 
 校验器检查两份来源的固定哈希、唯一 `[Rule]` 节、允许的规则类型和策略、重复规则、完整输出顺序及上游过滤结果；另检查 80 个代表性服务地址的代理路由，以及大陆通用直连规则。包含曾被直连正则匹配的视频／下载地址、Google 中国域名、字体、API、Gmail、Drive、证书、Firebase、统计和广告服务，以及 X／Twitter、GitHub 下载、ChatGPT／Codex、Claude、Cursor、Copilot、Hugging Face 等。
 
+校验器同时检查旧入口文件存在且与改名前版本的 SHA-256 一致，防止兼容入口被删除或意外改写。
+
 这些是文件级静态校验，未对本次版本进行 Shadowrocket 客户端播放测速。安装后可在连接记录中核对 `googlevideo.com`、`youtube.com` 等是否命中 `PROXY`，大陆网站是否继续命中 `DIRECT`。
 
 ## 来源、更新与复现
@@ -57,7 +61,7 @@ https://raw.githubusercontent.com/hmxxgit/shadowrocket_direct_module/main/sr_rou
 - 海外服务域名：[v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)，固定提交 `c6adacf29cc4fb05e04651fcf03e00989ef9f797`。全部依赖列表、许可及每文件哈希存于 `upstream/proxy-services/`。
 - 快照及修改日期：2026-10-10（Asia/Shanghai）。
 
-本模块不会自动追随上游。更新时需审查新快照，重新构建、校验并发布；Shadowrocket 内更新模块才能获取新规则。当前发布入口为 `sr_routing.module`；旧文件名已停止发布，请使用上面的新链接。可将 `main` 替换为提交 SHA 固定版本。
+本模块不会自动追随上游。更新时需审查新快照，重新构建、校验并发布；Shadowrocket 内更新模块才能获取新规则。新版发布入口为 `sr_routing.module`；旧入口 `sr_direct_list.module` 保留改名前的内容，继续可用。可将 `main` 替换为提交 SHA 固定版本。
 
 使用 Python 3 标准库离线复现：
 
@@ -66,7 +70,7 @@ python3 scripts/build.py
 python3 scripts/validate.py
 ```
 
-构建脚本生成 `sr_routing.module`：先生成海外服务代理规则，再过滤直连快照中的冲突规则，最后添加大陆 GeoIP。重新构建不会恢复本次移除的海外服务直连规则。
+构建脚本只生成 `sr_routing.module`，不会覆盖旧入口 `sr_direct_list.module`：先生成海外服务代理规则，再过滤直连快照中的冲突规则，最后添加大陆 GeoIP。重新构建不会恢复本次移除的海外服务直连规则。
 
 ## 许可
 

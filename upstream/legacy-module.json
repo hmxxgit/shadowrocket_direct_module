@@ -1,0 +1,6 @@
+{
+  "path": "sr_direct_list.module",
+  "restored_from_commit": "3e46d2542e4d2785a88c461b2f559a7af0b65a66",
+  "sha256": "17b1eb255dc9eab3b3fbaf87bcc428730b00fa0e4fef19f420c37ac9af1c2c9f",
+  "maintenance": "Preserved unchanged for existing users; build.py only generates sr_routing.module."
+}
