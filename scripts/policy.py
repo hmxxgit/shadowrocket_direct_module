@@ -2,6 +2,7 @@
 import csv
 import hashlib
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -12,6 +13,17 @@ EXTRA_DOMAINS = {"dns.google", "recaptcha.net", "recaptcha-cn.net", "googlefligh
                  "googleapis-cn.com", "googleapps-cn.com", "gstatic-cn.com",
                  "auth0.com", "openaimerge.com", "oaistatsig.com", "featuregates.org",
                  "statsigapi.net", "statsig.com", "webpubsub.azure.com"}
+
+
+def ime_direct_rules():
+    data = json.loads((ROOT / "rules/ime_direct.json").read_text())
+    domains = data["domains"]
+    if len(domains) != len(set(domains)):
+        raise ValueError("Duplicate IME direct domains")
+    for domain in domains:
+        if not re.fullmatch(r"[a-z0-9-]+(?:\.[a-z0-9-]+)+", domain):
+            raise ValueError(f"Invalid IME direct domain: {domain}")
+    return [f"DOMAIN-SUFFIX,{domain},DIRECT" for domain in domains]
 
 
 def proxy_domains():

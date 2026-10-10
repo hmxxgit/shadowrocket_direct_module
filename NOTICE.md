@@ -16,3 +16,7 @@
 海外服务代理域名列表来自 [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)，固定提交 `c6adacf29cc4fb05e04651fcf03e00989ef9f797`，许可为 MIT（Copyright (c) 2018-2019 V2Ray），全文保留于 `upstream/proxy-services/LICENSE`。
 
 原始 Google／Gemini、海外 AI、海外社交媒体及开发／通讯服务列表和所有递归依赖未经修改地保存在 `upstream/proxy-services/`，来源链接及 SHA-256 见该目录的 `source.json`。构建时展开依赖，保留全部属性条目，转换为域名后缀代理规则、去除冗余子域，并补充少量服务根域和 OpenAI 相关认证、实验服务域名。Google Play 的两个正则由整个下载域名覆盖；ChatGPT 的动态 WebSocket 正则由共享后缀 `webpubsub.azure.com` 的代理规则覆盖。发布模块仍按 GPL-3.0 分发。
+
+## 输入法直连规则
+
+2026-10-11 新增豆包输入法和微信输入法的 20 条优先直连规则，覆盖已确认的 API、语音、同步、下载、资源和监控服务。域名来源为官方站点、官方应用中的域名常量；完整条目与来源记录见 `rules/ime_direct.json`。共享 CDN／监控域名采用后缀直连，同一后缀下的其他服务也会直连。构建时将这些规则放在海外代理规则之前，并去除与上游完全重复的直连条目。

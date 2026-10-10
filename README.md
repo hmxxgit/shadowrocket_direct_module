@@ -1,6 +1,6 @@
 # Shadowrocket 分流模块
 
-Google、YouTube、X／Twitter、GitHub、ChatGPT、Gemini、Codex 等已收录服务及相关域名走代理；其余保留上游直连规则，并补充大陆 GeoIP 直连。未命中流量沿用原配置。
+豆包输入法、微信输入法及已收录的语音、API、同步、下载、资源和监控域名优先直连。Google、YouTube、X／Twitter、GitHub、ChatGPT、Gemini、Codex 等已收录服务及相关域名走代理；其余保留上游直连规则，并补充大陆 GeoIP 直连。未命中流量沿用原配置。
 
 ## 导入链接
 

@@ -1,5 +1,5 @@
 #!name=大陆直连与海外服务代理
-#!desc=分流模块：Google/YouTube/X/GitHub/ChatGPT/Gemini/Codex 等服务优先代理，其余保留上游直连并补充大陆 GeoIP；无脚本/解密。
+#!desc=分流模块：豆包/微信输入法优先直连；Google/YouTube/X/GitHub/ChatGPT/Gemini/Codex 等服务优先代理，其余保留上游直连并补充大陆 GeoIP；无脚本/解密。
 #!url=https://raw.githubusercontent.com/hmxxgit/shadowrocket_direct_module/main/sr_routing.module
 #!homepage=https://github.com/hmxxgit/shadowrocket_direct_module
 # Derived from GMOogway/shadowrocket-rules; GPL-3.0 (see LICENSE-GPL-3.0).
@@ -8,7 +8,29 @@
 # Overseas service domains: pinned v2fly/domain-list-community (MIT); see upstream/proxy-services/.
 # Enable and move this module to the top of the Shadowrocket module list.
 [Rule]
-# Overseas AI, social and developer services use PROXY, including related CDN/API domains.
+# Doubao IME and WeType services use DIRECT before all other routing rules.
+DOMAIN-SUFFIX,doubao.com,DIRECT
+DOMAIN-SUFFIX,doubaocdn.com,DIRECT
+DOMAIN-SUFFIX,bytespeech.com,DIRECT
+DOMAIN-SUFFIX,byteimg.com,DIRECT
+DOMAIN-SUFFIX,bytednsdoc.com,DIRECT
+DOMAIN-SUFFIX,ime.oceancloudapi.com,DIRECT
+DOMAIN-SUFFIX,ime-gw.oceancloudapi.com,DIRECT
+DOMAIN-SUFFIX,speech.bytedance.com,DIRECT
+DOMAIN-SUFFIX,imagex.bytedanceapi.com,DIRECT
+DOMAIN-SUFFIX,effect.snssdk.com,DIRECT
+DOMAIN-SUFFIX,is.snssdk.com,DIRECT
+DOMAIN-SUFFIX,crash.snssdk.com,DIRECT
+DOMAIN-SUFFIX,zijieapi.com,DIRECT
+DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+DOMAIN-SUFFIX,wetype.wxqcloud.qq.com,DIRECT
+DOMAIN-SUFFIX,wxkeyboardcms-1258476243.file.myqcloud.com,DIRECT
+DOMAIN-SUFFIX,download.weread.qq.com,DIRECT
+DOMAIN-SUFFIX,cdn.weread.qq.com,DIRECT
+DOMAIN-SUFFIX,oss.weread.qq.com,DIRECT
+DOMAIN-SUFFIX,qpic.cn,DIRECT
+
+# Overseas AI, social and developer services use PROXY.
 DOMAIN-SUFFIX,0emm.com,PROXY
 DOMAIN-SUFFIX,1e100.net,PROXY
 DOMAIN-SUFFIX,1ucrs.com,PROXY
@@ -8835,7 +8857,6 @@ DOMAIN-SUFFIX,kuaigeng.com,DIRECT
 DOMAIN-SUFFIX,alkpharm.com,DIRECT
 DOMAIN-SUFFIX,realtek-rtd.com,DIRECT
 DOMAIN-SUFFIX,ahluqiao.com,DIRECT
-DOMAIN-SUFFIX,doubao.com,DIRECT
 DOMAIN-SUFFIX,quxianzhuan.com,DIRECT
 DOMAIN-SUFFIX,zhuanstatic.com,DIRECT
 DOMAIN-SUFFIX,yiruantong.com,DIRECT
@@ -23699,7 +23720,6 @@ DOMAIN-SUFFIX,jseduinfo.com,DIRECT
 DOMAIN-SUFFIX,jyshare.com,DIRECT
 DOMAIN-SUFFIX,393.com,DIRECT
 DOMAIN-SUFFIX,9191net.com,DIRECT
-DOMAIN-SUFFIX,bytednsdoc.com,DIRECT
 DOMAIN-SUFFIX,byteics.net,DIRECT
 DOMAIN-SUFFIX,ju8811.com,DIRECT
 DOMAIN-SUFFIX,cheasa.org,DIRECT
@@ -31671,7 +31691,6 @@ DOMAIN-SUFFIX,ppkankan01.com,DIRECT
 DOMAIN-SUFFIX,45app.com,DIRECT
 DOMAIN-SUFFIX,ejcms.com,DIRECT
 DOMAIN-SUFFIX,thomasschools.com,DIRECT
-DOMAIN-SUFFIX,doubaocdn.com,DIRECT
 DOMAIN-SUFFIX,haodou.com,DIRECT
 DOMAIN-SUFFIX,xzsw.net,DIRECT
 DOMAIN-SUFFIX,with366.com,DIRECT
@@ -53963,7 +53982,6 @@ DOMAIN-SUFFIX,fandiankeji.com,DIRECT
 DOMAIN-SUFFIX,looyu.com,DIRECT
 DOMAIN-SUFFIX,hedgehogbio.com,DIRECT
 DOMAIN-SUFFIX,shengcaiyoushu.com,DIRECT
-DOMAIN-SUFFIX,byteimg.com,DIRECT
 DOMAIN-SUFFIX,sanyangma.com,DIRECT
 DOMAIN-SUFFIX,huajuhotel.com,DIRECT
 DOMAIN-SUFFIX,gtm.pub,DIRECT
@@ -92254,7 +92272,6 @@ DOMAIN-SUFFIX,eeeff.com,DIRECT
 DOMAIN-SUFFIX,hbszxyjhyy.com,DIRECT
 DOMAIN-SUFFIX,leatherhr.com,DIRECT
 DOMAIN-SUFFIX,ynztkj.com,DIRECT
-DOMAIN-SUFFIX,zijieapi.com,DIRECT
 DOMAIN-SUFFIX,haofly.net,DIRECT
 DOMAIN-SUFFIX,chda.net,DIRECT
 DOMAIN-SUFFIX,liurq.com,DIRECT
@@ -104831,7 +104848,6 @@ DOMAIN-SUFFIX,numans.cc,DIRECT
 DOMAIN-SUFFIX,ruige.com,DIRECT
 DOMAIN-SUFFIX,only-memory.com,DIRECT
 DOMAIN-SUFFIX,cqyuxing.com,DIRECT
-DOMAIN-SUFFIX,bytespeech.com,DIRECT
 DOMAIN-SUFFIX,miwuzhentan.com,DIRECT
 DOMAIN-SUFFIX,pxyyjt.com,DIRECT
 DOMAIN-SUFFIX,pc34.com,DIRECT

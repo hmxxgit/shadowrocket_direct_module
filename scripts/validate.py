@@ -7,7 +7,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
-from policy import MODULE, module_rules
+from policy import MODULE, module_rules, ime_direct_rules
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -97,6 +97,34 @@ def verify_service_routing(rules):
     print(f"PASS: {len(samples)} Overseas service/video routing cases and mainland direct rules.")
 
 
+def verify_ime_routing(rules):
+    # Independent representative endpoints from the official apps and websites.
+    hosts = [
+        "shurufa.doubao.com", "api-normal.doubao.com", "ime.doubao.com",
+        "static.doubaocdn.com", "wx.qpic.cn",
+        "frontier-audio-ime-quic.doubao.com", "frontier-audio-ime-ws.doubao.com",
+        "frontier-ime.doubao.com", "ime.oceancloudapi.com", "ime-gw.oceancloudapi.com",
+        "speech.bytedance.com", "imagex.bytedanceapi.com", "effect.snssdk.com",
+        "is.snssdk.com", "crash.snssdk.com", "pc-mon.zijieapi.com",
+        "tnc0-bjlgy.zijieapi.com", "log-klink.zijieapi.com", "rtlog.zijieapi.com",
+        "p0-ime-clip-private.byteimg.com", "p0-ime-clip2-private.byteimg.com",
+        "lf-speechfe-cdn.bytespeech.com", "lf3-static.bytednsdoc.com",
+        "z.weixin.qq.com", "wetype.weixin.qq.com", "download.z.weixin.qq.com",
+        "wxkb.weixin.qq.com", "wetype.wxqcloud.qq.com",
+        "wxkeyboardcms-1258476243.file.myqcloud.com",
+        "download.weread.qq.com", "cdn.weread.qq.com", "oss.weread.qq.com",
+    ]
+    parsed = [next(csv.reader([line], strict=True)) for line in rules]
+    for host in hosts:
+        matches = [(kind, value, policy) for kind, value, policy in parsed
+                   if (kind == "DOMAIN" and host == value) or
+                   (kind == "DOMAIN-SUFFIX" and (host == value or host.endswith("." + value)))]
+        require(matches and matches[0][2] == "DIRECT", f"IME does not route DIRECT: {host}")
+        require(not any(policy == "PROXY" for _, _, policy in matches),
+                f"Conflicting IME proxy rule remains: {host}")
+    print(f"PASS: {len(hosts)} IME API/voice/sync/download/monitoring routing cases.")
+
+
 def validate():
     source = ROOT / "upstream/sr_direct_list.module"
     metadata = json.loads((ROOT / "upstream/source.json").read_text())
@@ -106,9 +134,13 @@ def validate():
     require(len(upstream) == metadata["rule_count"], "Upstream count mismatch")
     result = read_rules(MODULE, allowed | {"GEOIP"}, ("DIRECT", "PROXY"))
     proxy, direct, removed = module_rules()
-    require(result == proxy + direct + ["GEOIP,CN,DIRECT"], "Incorrect Service priority or unexpected rules")
-    require(len(direct) + len(removed) == len(upstream), "Upstream partition mismatch")
+    ime = ime_direct_rules()
+    ime_set = set(ime)
+    direct = [rule for rule in direct if rule not in ime_set]
+    require(result == ime + proxy + direct + ["GEOIP,CN,DIRECT"], "Incorrect Service priority or unexpected rules")
+    require(len(direct) + len(removed) + len(set(ime).intersection(upstream)) == len(upstream), "Upstream partition mismatch")
     verify_service_routing(result)
+    verify_ime_routing(result)
     require((ROOT / "LICENSE-GPL-3.0").is_file(), "Missing upstream license")
     require((ROOT / "NOTICE.md").is_file(), "Missing attribution")
     counts = Counter(line.split(",", 1)[0] for line in result)

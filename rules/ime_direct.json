@@ -1,0 +1,34 @@
+{
+  "description": "豆包输入法和微信输入法优先直连；包含已确认的 API、语音、同步、下载、资源和监控域名。",
+  "reviewed_date": "2026-10-11",
+  "sources": [
+    "https://shurufa.doubao.com/pc",
+    "https://wetype.weixin.qq.com/",
+    "https://wxkeyboardcms-1258476243.file.myqcloud.com/page/article/index/4.html",
+    "https://download.weread.qq.com/app/wxkb/mac/3.0.0/install_info_3.0.0_664.json",
+    "已安装的官方 DoubaoIme 程序及 SDK 中的域名常量（不读取输入内容或用户日志）",
+    "微信输入法官网提供的官方 macOS 安装器中的域名常量"
+  ],
+  "domains": [
+    "doubao.com",
+    "doubaocdn.com",
+    "bytespeech.com",
+    "byteimg.com",
+    "bytednsdoc.com",
+    "ime.oceancloudapi.com",
+    "ime-gw.oceancloudapi.com",
+    "speech.bytedance.com",
+    "imagex.bytedanceapi.com",
+    "effect.snssdk.com",
+    "is.snssdk.com",
+    "crash.snssdk.com",
+    "zijieapi.com",
+    "weixin.qq.com",
+    "wetype.wxqcloud.qq.com",
+    "wxkeyboardcms-1258476243.file.myqcloud.com",
+    "download.weread.qq.com",
+    "cdn.weread.qq.com",
+    "oss.weread.qq.com",
+    "qpic.cn"
+  ]
+}
