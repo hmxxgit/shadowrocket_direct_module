@@ -4,27 +4,37 @@
   "retrieved_date": "2026-10-10",
   "license": "MIT",
   "roots": [
-    "google",
-    "google-gemini",
+    "anaconda",
     "category-ai-!cn",
     "category-social-media-!cn",
+    "cloudflare",
+    "codeberg",
+    "discord",
+    "disney",
+    "docker",
+    "gitbook",
     "github",
     "gitlab",
-    "discord",
-    "telegram",
-    "reddit",
-    "docker",
+    "google",
+    "google-gemini",
+    "hbo",
     "homebrew",
-    "python",
-    "stackexchange",
-    "rust",
-    "jetbrains",
     "huggingface",
-    "anaconda",
-    "gitbook",
+    "jetbrains",
+    "netflix",
+    "netlify",
+    "primevideo",
+    "python",
     "readthedocs",
+    "reddit",
+    "rust",
+    "signal",
     "sourcehut",
-    "codeberg"
+    "spotify",
+    "stackexchange",
+    "telegram",
+    "vercel",
+    "whatsapp"
   ],
   "files": {
     "LICENSE": {
@@ -314,6 +324,87 @@
     "misskey-universe": {
       "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/misskey-universe",
       "sha256": "ee9ce376f579d61f11bf9d04f7d2a516f82c00ce5667976e33dc5584f316ca36"
+    },
+    "netflix": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/netflix",
+      "sha256": "6a5568ce8d99b718b3a191292c81c94be56b5e14601316b99a6ece708f8f91f7"
+    },
+    "disney": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/disney",
+      "sha256": "692bd4cf2e28adc8128597bcd9fcd77eae2c6ac9420dc282703873a6d40a05b1"
+    },
+    "abc": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/abc",
+      "sha256": "02ed5d8d8c36b60c3b305f8ebc0fdbb5b5651e3e485e257eeb4cb09837584688"
+    },
+    "bamtech": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/bamtech",
+      "sha256": "2843f3fbb363384ccea3b181e5a83a42dcea0265e5ce83c926c7602dce249477"
+    },
+    "espn": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/espn",
+      "sha256": "a7c43b6e8e391d427d4b3295d52a10e028d1ffd5c2aca4382c349c89b614ba9b"
+    },
+    "hotstar": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/hotstar",
+      "sha256": "866aa510b852222fce27af7dcdba0c8f9e5ad7d057d997e2639b8cbbfe94f36f"
+    },
+    "hulu": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/hulu",
+      "sha256": "d4696aed44dfa0440ec910adb027319d73525b3314dd3d6a8445e15a8aaa4315"
+    },
+    "marvel": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/marvel",
+      "sha256": "2a61430d0727160f04630640e8258926253db9e329b5b3b126c465fe5b56f7c6"
+    },
+    "nationalgeographic": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/nationalgeographic",
+      "sha256": "9208d4d8ebabcb587620670a8e6b786540e8a0151d0e8636b8e7824954f929fb"
+    },
+    "starplus": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/starplus",
+      "sha256": "7cc2be782bb9d7e27547d2c4aca9f417f62b0b8cb8a12425122b43ff79a32427"
+    },
+    "hbo": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/hbo",
+      "sha256": "d2b518e13cb51bda4edeab12d2a49a7d2b1ab856b62b49bf4eb13e1cc58d3117"
+    },
+    "spotify": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/spotify",
+      "sha256": "ec710e93e84e85536a661905f2182f239464f55c1e837523de222d7e9d21c65b"
+    },
+    "primevideo": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/primevideo",
+      "sha256": "0aae0628d6471a1447e70a9ebfced076716f09bea659dd12fbd2168dbb1e2826"
+    },
+    "signal": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/signal",
+      "sha256": "2f36d2f4841bbb2c255b365dbbe1690fab8b6a721341d4b1660afb90f432cd01"
+    },
+    "whatsapp": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/whatsapp",
+      "sha256": "62def09a533350c9e5259d1d498ed1da1689ff174f436f51c065260f21f037d2"
+    },
+    "vercel": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/vercel",
+      "sha256": "5a8d3e7e95f50ca224e1821aa31ac2f43748a64825b8424d9d21c70a1a8e70a8"
+    },
+    "netlify": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/netlify",
+      "sha256": "8aa90132a3c24dc9eeb257c8a029ff53824b3ec3de74e29f69bd522def60c64d"
+    },
+    "cloudflare": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/cloudflare",
+      "sha256": "b3bde86c39bd09ee1e10874e793332f72c42515b58842309d53eadbc26d75683"
+    },
+    "cloudflare-cn": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/cloudflare-cn",
+      "sha256": "6c999fdc4dc8de0dd79df60195aeb551c3e984a678c13a801a07da1faf2fdde3"
+    },
+    "cloudflare-ipfs": {
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/cloudflare-ipfs",
+      "sha256": "2e781c1f6906af7ae79273b9cc8e975b2fc94ed0a6b7c13718de8cb51bad1c8d"
     }
-  }
+  },
+  "supplement_retrieved_date": "2026-10-14"
 }

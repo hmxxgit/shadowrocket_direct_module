@@ -1,44 +1,37 @@
 #!/usr/bin/env python3
-"""Build the static module from reviewed, pinned snapshots."""
+"""Offline deterministic build. Upstream changes never update release implicitly."""
+import hashlib
 import json
-from johnshall import johnshall_direct_rules
-from domestic import domestic_direct_rules
-from policy import ROOT, MODULE, module_rules, priority_direct_rules
+from collections import Counter
+from policy import ROOT, MODULE, generate
+
+
+def render(rules):
+    return (
+        '#!name=大陆直连与海外服务代理\n'
+        '#!desc=国内已确认业务 DIRECT；海外已确认业务 PROXY；未匹配流量沿用原配置。无节点、脚本、重写或 HTTPS 解密。\n'
+        '#!url=https://raw.githubusercontent.com/hmxxgit/shadowrocket_direct_module/main/sr_routing.module\n'
+        '#!homepage=https://github.com/hmxxgit/shadowrocket_direct_module\n'
+        '# Derived from pinned GMOogway, v2fly and Johnshall snapshots; see NOTICE.md.\n'
+        '# Product policy: rules/services.json; license GPL-3.0.\n'
+        '# PROXY exceptions precede DIRECT; GEOIP,CN is the last fallback; no FINAL.\n'
+        '[Rule]\n' + '\n'.join(rule.line() for rule in rules) + '\n')
 
 
 def build():
-    metadata = json.loads((ROOT / "upstream/source.json").read_text())
-    proxy, direct, removed = module_rules()
-    domestic, stats = domestic_direct_rules()
-    johnshall, johnshall_stats, _ = johnshall_direct_rules()
-    priority = priority_direct_rules()
-    priority_set = set(priority)
-    direct = [rule for rule in direct if rule not in priority_set]
-    header = (
-        "#!name=大陆直连与海外服务代理\n"
-        "#!desc=分流模块：字节跳动全系服务及微信输入法优先直连；Google/YouTube/X/GitHub/ChatGPT/Gemini/Codex 等服务优先代理，微信/QQ 等国内应用直连，其余保留上游直连并补充大陆 GeoIP；无脚本/解密。\n"
-        "#!url=https://raw.githubusercontent.com/hmxxgit/shadowrocket_direct_module/main/sr_routing.module\n"
-        "#!homepage=https://github.com/hmxxgit/shadowrocket_direct_module\n"
-        "# Derived from GMOogway/shadowrocket-rules; GPL-3.0 (see LICENSE-GPL-3.0).\n"
-        f"# Upstream commit: {metadata['commit']}\n"
-        f"# Upstream SHA-256: {metadata['sha256']}\n"
-        "# Overseas service domains: pinned v2fly/domain-list-community (MIT); see upstream/proxy-services/.\n"
-        "# Enable and move this module to the top of the Shadowrocket module list.\n"
-        "[Rule]\n"
-        "# ByteDance and WeType services use DIRECT before all other routing rules.\n"
-    )
-    text = (header + "\n".join(priority) +
-            "\n\n# Overseas AI, social and developer services use PROXY.\n" + "\n".join(proxy) +
-            "\n\n# Reviewed upstream direct rules, excluding overseas-service conflicts.\n" +
-            "\n".join(direct) +
-            "\n\n# Additional domestic application domains from pinned v2fly lists.\n" + "\n".join(domestic) +
-            "\n\n# Explicit DIRECT rules adapted from Johnshall (CC BY-SA 4.0); see upstream/johnshall/.\n" + "\n".join(johnshall) +
-            "\n\n# Mainland China IP fallback, using Shadowrocket's GeoIP database.\nGEOIP,CN,DIRECT\n")
-    print("Domestic import:", stats)
-    print("Johnshall import:", johnshall_stats)
-    MODULE.write_text(text, encoding="utf-8")
-    print(f"Built: {len(priority)} priority ByteDance/IME DIRECT rules; {len(proxy)} overseas-service PROXY rules; removed {len(removed)} conflicting DIRECT rules.")
+    rules, report = generate()
+    text = render(rules)
+    MODULE.write_text(text)
+    report.update({'baseline':json.loads((ROOT / 'rules/baseline.json').read_text()),
+                   'rules':len(rules),'bytes':len(text.encode()),
+                   'domains':len({r.value for r in rules if r.kind in {'DOMAIN','DOMAIN-SUFFIX'}}),
+                   'counts':dict(Counter(r.policy for r in rules)),
+                   'sha256':hashlib.sha256(text.encode()).hexdigest()})
+    path = ROOT / 'reports/build.json'
+    path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+    print(f'Built {len(rules):,} rules / {report["bytes"]:,} bytes; {report["counts"]}')
+    print('Optimization:',report['optimization'],'; unresolved conflicts:',report['unresolved_conflicts'])
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     build()

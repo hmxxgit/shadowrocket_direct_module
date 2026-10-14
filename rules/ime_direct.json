@@ -1,5 +1,5 @@
 {
-  "description": "豆包输入法和微信输入法优先直连；包含已确认的 API、语音、同步、下载、资源和监控域名。",
+  "description": "输入法域名来源证据；观察到父域不代表整个父域都适合直连。实际分类仅由 rules/services.json 定义。",
   "reviewed_date": "2026-10-11",
   "sources": [
     "https://shurufa.doubao.com/pc",
@@ -9,7 +9,7 @@
     "已安装的官方 DoubaoIme 程序及 SDK 中的域名常量（不读取输入内容或用户日志）",
     "微信输入法官网提供的官方 macOS 安装器中的域名常量"
   ],
-  "domains": [
+  "observed_names": [
     "doubao.com",
     "doubaocdn.com",
     "bytespeech.com",

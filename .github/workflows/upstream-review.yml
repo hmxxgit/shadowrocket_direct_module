@@ -1,0 +1,37 @@
+name: Review upstream changes
+on:
+  schedule:
+    - cron: '17 2 * * 1' # Monday 10:17 Asia/Shanghai
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/build.py
+      - run: python scripts/validate.py
+      - name: Verify pinned remote bytes and collect candidate differences
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/check_upstream.py --output upstream-review/changes.json
+      - name: Summarize required review
+        run: |
+          python - <<'PY'
+          import json, os
+          report = json.load(open('upstream-review/changes.json'))
+          count = sum(entry['changed'] for entry in report['files'])
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+              summary.write(f'{count} changed files require human routing review. Download the upstream-review artifact. The published module was not changed.\n')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: upstream-review
+          path: upstream-review/

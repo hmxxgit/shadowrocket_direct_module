@@ -1,0 +1,222 @@
+{
+  "reviewed_date": "2026-10-14",
+  "pages": [
+    {
+      "url": "https://www.capcut.com/",
+      "final_url": "https://www.capcut.com/",
+      "sha256": "c54f894841f32b8ea9e4bcceb0a81cb0dd138289c0bc02b8f699348824633cd5",
+      "referenced_hosts": [
+        "capcutpad.onelink.me",
+        "commerce-us-ttp2.us.capcut.com",
+        "discord.com",
+        "dreamina.capcut.com",
+        "hypic.capcut.com",
+        "p16-seeyou-useast8.capcutcdn-us.com",
+        "pippit.ai",
+        "schema.org",
+        "sf16-ug-tos.capcutcdn-us.com",
+        "sf16-web-tos-buz.capcutcdn-us.com",
+        "sf19-draftcdn-sg.ibytedtos.com",
+        "tools.capcut.com",
+        "web-edit-us-ttp2.us.capcut.com",
+        "www.capcut.com",
+        "www.clarity.ms",
+        "www.facebook.com",
+        "www.googletagmanager.com",
+        "www.instagram.com",
+        "www.larksuite.com",
+        "www.tiktok.com",
+        "www.w3.org",
+        "www.youtube.com"
+      ],
+      "evidence": "public HTML references; not iOS traffic capture"
+    },
+    {
+      "url": "https://www.larksuite.com/",
+      "final_url": "https://www.larksuite.com/zh_cn/",
+      "sha256": "b3d61e520e83611cb2c44b00c4d741459c7c43ebf2a81ab49ff2ea061dbc8aab",
+      "referenced_hosts": [
+        "accounts.google.com",
+        "accounts.larksuite.com",
+        "api-iam.intercom.io",
+        "app.larksuite.com",
+        "applink.larksuite.com",
+        "img04.en25.com",
+        "jobs.bytedance.com",
+        "lf-package-sg.larksuitecdn.com",
+        "lf-static-sg.larksuitecdn.com",
+        "mcs-bd-sg.larksuite.com",
+        "meetings.larksuite.com",
+        "open.larksuite.com",
+        "p1-hera.feishucdn.com",
+        "p16-hera-overseas.larksuitecdn.com",
+        "p16-hera-sg.larksuitecdn.com",
+        "sf16-sg.larksuitecdn.com",
+        "sf16-short-sg.bytedapm.com",
+        "sf19-sg.larksuitecdn.com",
+        "sf21-sg.larksuitecdn.com",
+        "static.zdassets.com",
+        "twitter.com",
+        "vc.larksuite.com",
+        "widget.intercom.io",
+        "www.facebook.com",
+        "www.googletagmanager.com",
+        "www.instagram.com",
+        "www.larksuite.com",
+        "www.linkedin.com",
+        "www.tiktok.com",
+        "www.w3.org",
+        "www.youtube.com"
+      ],
+      "evidence": "public HTML references; not iOS traffic capture"
+    },
+    {
+      "url": "https://www.coze.com/",
+      "final_url": "https://www.coze.com/",
+      "sha256": "8499e39ae795ee5fe1abfca01152e896f2e0dfb3253f77f8677d547221ca994d",
+      "referenced_hosts": [
+        "bytegate.byteintlapi.com",
+        "lf-c-flwb.bytetos.com",
+        "lf-c-flwb.ibytedtos.com",
+        "sf-cdn.coze.com",
+        "sf-coze-web-cdn.coze.com",
+        "unpkg.byted-static.com",
+        "www.w3.org"
+      ],
+      "evidence": "public HTML references; not iOS traffic capture"
+    },
+    {
+      "url": "https://www.trae.ai/",
+      "final_url": "https://www.trae.ai/",
+      "sha256": "2c6bcc88a4e8f2a705a81f37f2d6a2dee14781e5b48116cfc4d33110433731ad",
+      "referenced_hosts": [
+        "lf-static.traecdn.us",
+        "lf16-cdn-tos.tiktokcdn-us.com",
+        "trae.ai",
+        "work.trae.ai",
+        "www.trae.ai",
+        "www.w3.org"
+      ],
+      "evidence": "public HTML references; not iOS traffic capture"
+    },
+    {
+      "url": "https://www.dola.com/",
+      "final_url": "https://www.dola.com/chat/",
+      "sha256": "56fd60ad9a179c9c965ced5bba5b4d595f30aefc9c2e700f1a5fb5cc58457ac6",
+      "referenced_hosts": [
+        "lf-flow-web-cdn.doubao.com",
+        "sf-flow-web-cdn.ciciai.com",
+        "sf16-short-sg.bytedapm.com",
+        "sf16-website-login.neutral.ttwstatic.com",
+        "sf3-short.ibytedapm.com"
+      ],
+      "evidence": "public HTML references; not iOS traffic capture"
+    },
+    {
+      "url": "https://www.temu.com/",
+      "final_url": "https://www.temu.com/br",
+      "sha256": "7899189ecfd69a7a1c78d9668ba580d3edd337fe1defa6a71e56d5fa56f0748d",
+      "referenced_hosts": [
+        "aimg.kwcdn.com",
+        "apps.apple.com",
+        "e-enfance.org",
+        "en.wikipedia.org",
+        "img.kwcdn.com",
+        "play.google.com",
+        "schema.org",
+        "static.kwcdn.com",
+        "www.facebook.com",
+        "www.instagram.com",
+        "www.linkedin.com",
+        "www.pinterest.com",
+        "www.temu.com",
+        "www.tiktok.com",
+        "www.twitter.com",
+        "www.w3.org",
+        "www.youtube.com"
+      ],
+      "evidence": "public HTML references; not iOS traffic capture"
+    },
+    {
+      "url": "https://www.joybuy.com/",
+      "final_url": "https://www.joybuy.com/country-selection",
+      "sha256": "16463252f8f608e67a10b9fd79d85b184ff3c48b681214daa963b66cf7387b82",
+      "referenced_hosts": [
+        "bzrcdn.openai.com",
+        "connect.facebook.net",
+        "h5log.joybuy.com",
+        "help.joybuy.com",
+        "images1.joy-sourcing.com",
+        "images2.joy-sourcing.com",
+        "images3.joy-sourcing.com",
+        "images4.joy-sourcing.com",
+        "jras.joybuy.com",
+        "m.joy",
+        "m.joybuy.co.uk",
+        "m.joybuy.com",
+        "m.joybuy.de",
+        "m.joybuy.fr",
+        "m.joybuy.nl",
+        "policies.google.com",
+        "s.pinimg.com",
+        "sgm-alps.joybuy.com",
+        "sgm-static.jd.com",
+        "st.joy-sourcing.com",
+        "storage.360buyimg.com",
+        "www.facebook.com",
+        "www.googletagmanager.com",
+        "www.gstatic.com",
+        "www.joybuy.co.uk",
+        "www.joybuy.com",
+        "www.joybuy.de",
+        "www.joybuy.fr",
+        "www.joybuy.nl"
+      ],
+      "evidence": "public HTML references; not iOS traffic capture"
+    },
+    {
+      "url": "https://www.coze.cn/",
+      "final_url": "https://www.coze.cn/",
+      "sha256": "a5b0a8f7390a5cea5afa4cb67831225dffe821325d67f1c71841c264b7e7a576",
+      "referenced_hosts": [
+        "lf-c-flwb.bytetos.com",
+        "lf3-short.ibytedapm.com",
+        "mon.zijieapi.com",
+        "www.coze.cn"
+      ],
+      "evidence": "public HTML references; not iOS traffic capture"
+    },
+    {
+      "url": "https://www.doubao.com/",
+      "final_url": "https://www.doubao.com/chat/",
+      "sha256": "cdcd0ef6bff4e19567b926ad1630eb4f43d35691aac89bedf0e40be301531408",
+      "referenced_hosts": [
+        "lf-flow-web-cdn.doubao.com",
+        "lf3-short.ibytedapm.com"
+      ],
+      "evidence": "public HTML references; not iOS traffic capture"
+    },
+    {
+      "url": "https://www.feishu.cn/",
+      "final_url": "https://www.feishu.cn/",
+      "sha256": "7ac1da7bf7362ff050ac0e33d047630332594e9d075bfc8c1f0cc17a6d52bcab",
+      "referenced_hosts": [
+        "p1-hera.feishucdn.com",
+        "sf3-scmcdn-cn.feishucdn.com",
+        "unpkg.byted-static.com"
+      ],
+      "evidence": "public HTML references; not iOS traffic capture"
+    },
+    {
+      "url": "https://shurufa.doubao.com/",
+      "final_url": "https://shurufa.doubao.com/pc",
+      "sha256": "2966b14696d6e18093aa0bf5d91b1d3c3b200bbe6e40ab39db6bb46727a4b309",
+      "referenced_hosts": [
+        "lf3-static.bytednsdoc.com",
+        "shurufa.doubao.com",
+        "www.w3.org"
+      ],
+      "evidence": "public HTML references; not iOS traffic capture"
+    }
+  ]
+}

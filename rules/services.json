@@ -1,0 +1,720 @@
+{
+  "reviewed_date": "2026-10-14",
+  "imports": [
+    {
+      "directory": "bytedance",
+      "roots": [
+        "douyin",
+        "fqnovel",
+        "feishu",
+        "dongchedi"
+      ],
+      "policy": "DIRECT",
+      "exclude_attributes": [
+        "!cn"
+      ]
+    },
+    {
+      "directory": "bytedance",
+      "roots": [
+        "tiktok",
+        "bytedance-ai-!cn"
+      ],
+      "policy": "PROXY"
+    },
+    {
+      "directory": "domestic",
+      "roots": [
+        "amap",
+        "meituan",
+        "pinduoduo",
+        "xiaohongshu",
+        "zhihu",
+        "douban",
+        "eleme",
+        "kugou",
+        "kuwo",
+        "youku",
+        "gitee",
+        "cnblogs",
+        "csdn"
+      ],
+      "policy": "DIRECT",
+      "exclude_attributes": [
+        "!cn"
+      ]
+    },
+    {
+      "directory": "proxy-services",
+      "roots": [
+        "anaconda",
+        "category-ai-!cn",
+        "category-social-media-!cn",
+        "codeberg",
+        "discord",
+        "docker",
+        "gitbook",
+        "github",
+        "gitlab",
+        "google",
+        "google-gemini",
+        "homebrew",
+        "huggingface",
+        "jetbrains",
+        "python",
+        "readthedocs",
+        "reddit",
+        "rust",
+        "sourcehut",
+        "stackexchange",
+        "telegram"
+      ],
+      "policy": "PROXY"
+    },
+    {
+      "directory": "proxy-services",
+      "roots": [
+        "netflix",
+        "disney",
+        "hbo",
+        "spotify",
+        "primevideo",
+        "signal",
+        "whatsapp",
+        "vercel",
+        "netlify",
+        "cloudflare"
+      ],
+      "policy": "PROXY",
+      "exclude_attributes": [
+        "cn"
+      ]
+    }
+  ],
+  "shared_suffixes": [
+    "auth0.com",
+    "statsig.com",
+    "statsigapi.net",
+    "featuregates.org",
+    "webpubsub.azure.com",
+    "azureedge.net",
+    "azurefd.net",
+    "blob.core.windows.net",
+    "amazonaws.com",
+    "cloudfront.net",
+    "akamaized.net",
+    "edgesuite.net",
+    "edgekey.net",
+    "fastly.net",
+    "fastlylb.net",
+    "myqcloud.com",
+    "tencentcos.com",
+    "aliyuncs.com",
+    "alicdn.com",
+    "alipayobjects.com",
+    "myhuaweicloud.com",
+    "bcebos.com",
+    "baidubce.com",
+    "dbankcloud.com",
+    "dbankcdn.com",
+    "hicloud.com",
+    "mi.com",
+    "xiaomi.com",
+    "miui.com",
+    "bytedance.com",
+    "bytedanceapi.com",
+    "byteimg.com",
+    "bytespeech.com",
+    "bytednsdoc.com",
+    "bytedns1.com",
+    "bytedns2.com",
+    "pstatp.com",
+    "snssdk.com",
+    "zijieapi.com",
+    "bytelb.net",
+    "bytedapm.com",
+    "ibytedapm.com",
+    "appspot.com",
+    "cloudfunctions.net",
+    "run.app",
+    "web.app",
+    "firebaseapp.com",
+    "firebaseio.com",
+    "vercel.app",
+    "netlify.app",
+    "workers.dev",
+    "pages.dev",
+    "r2.dev",
+    "cloudflare.net",
+    "cfargotunnel.com",
+    "trycloudflare.com",
+    "imagedelivery.net",
+    "videodelivery.net",
+    "livekit.cloud",
+    "sentry.io",
+    "datadoghq.com",
+    "browser-intake-datadoghq.com",
+    "oceancloudapi.com",
+    "coze-dns-01.com",
+    "coze.email",
+    "coze.site",
+    "cozeapp.net",
+    "cozebuild.com",
+    "cozecdn.com",
+    "cozedeploy.com",
+    "cozesdk.com",
+    "feishucdn.com",
+    "byted-static.com",
+    "bytetos.com",
+    "byteintlapi.com",
+    "360buyimg.com",
+    "netlifyusercontent.com",
+    "vercel-dns.com",
+    "netlifydns.com"
+  ],
+  "excluded_rules": [
+    "DOMAIN,host.livekit.cloud",
+    "DOMAIN-SUFFIX,host.livekit.cloud",
+    "DOMAIN-SUFFIX,turn.livekit.cloud",
+    "DOMAIN-SUFFIX,crixet.com",
+    "DOMAIN,www.destinationurl.com",
+    "DOMAIN,www.pxcc.com",
+    "DOMAIN,gtm.oasisfeng.com",
+    "DOMAIN-SUFFIX,kimi.ai",
+    "DOMAIN-SUFFIX,moonshot.ai"
+  ],
+  "groups": [
+    {
+      "service": "ByteDance mainland products",
+      "policy": "DIRECT",
+      "suffix": [
+        "toutiao.com",
+        "toutiaoapi.com",
+        "toutiaocdn.com",
+        "toutiaocloud.com",
+        "toutiaoimg.com",
+        "toutiaostatic.com",
+        "toutiaovod.com",
+        "ixigua.com",
+        "ixiguavideo.com",
+        "ixgvideo.com",
+        "bdxiguaimg.com",
+        "bdxigualive.com",
+        "bdxiguastatic.com",
+        "bdxiguavod.com",
+        "ibdxiguaimg.com",
+        "ibdxiguavod.com",
+        "jianying.com",
+        "jimeng.com",
+        "vlabimg.com",
+        "vlabstatic.com",
+        "vlabvod.com",
+        "oceanengine.com",
+        "volcengine.com",
+        "volcengine.cn",
+        "volces.com",
+        "coze.cn",
+        "trae.cn",
+        "trae.com.cn"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/bytedance/bytedance",
+        "upstream/bytedance/volcengine",
+        "https://www.coze.cn/"
+      ]
+    },
+    {
+      "service": "ByteDance international dedicated infrastructure",
+      "policy": "PROXY",
+      "suffix": [
+        "byteoversea.com",
+        "byteoversea.net",
+        "byteglb.com",
+        "ibytedtos.com",
+        "ibyteimg.com",
+        "capcut.com",
+        "capcutcdn-us.com",
+        "larksuite.com",
+        "larksuitecdn.com",
+        "larksuiteimg.com",
+        "larksuitepkg.com"
+      ],
+      "exact": [
+        "bytedance.map.fastly.net"
+      ],
+      "sources": [
+        "upstream/bytedance/bytedance",
+        "upstream/bytedance/lark-global",
+        "https://www.larksuite.com/hc/en-US/articles/360044784554-configure-organization-firewall-domain-and-ip-allowlist"
+      ]
+    },
+    {
+      "service": "Feishu document infrastructure (shared Lark list is not wholly international)",
+      "policy": "DIRECT",
+      "suffix": [
+        "larkoffice.com",
+        "larkofficecdn.com",
+        "larkofficeimg.com",
+        "larkofficepkg.com"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/bytedance/lark-global",
+        "https://www.feishu.cn/"
+      ]
+    },
+    {
+      "service": "Tencent mainland messaging, music and WeType",
+      "policy": "DIRECT",
+      "suffix": [
+        "qq.com",
+        "weixin.com",
+        "servicewechat.com",
+        "qqmail.com",
+        "qzone.com",
+        "idqqimg.com",
+        "tenpay.com",
+        "music.qq.com"
+      ],
+      "exact": [
+        "wx.qpic.cn",
+        "wxkeyboardcms-1258476243.file.myqcloud.com"
+      ],
+      "sources": [
+        "upstream/domestic/tencent",
+        "rules/ime_direct.json"
+      ]
+    },
+    {
+      "service": "Tencent international products",
+      "policy": "PROXY",
+      "suffix": [
+        "wetv.vip",
+        "wetvinfo.com",
+        "webnovel.com",
+        "proximabeta.com",
+        "midasbuy.com"
+      ],
+      "exact": [
+        "wetv.qq.com"
+      ],
+      "sources": [
+        "upstream/domestic/tencent",
+        "upstream/domestic/tencent-games",
+        "upstream/domestic/webnovel"
+      ]
+    },
+    {
+      "service": "Alibaba mainland commerce and payments",
+      "policy": "DIRECT",
+      "suffix": [
+        "taobao.com",
+        "taobao.net",
+        "taobaocdn.com",
+        "tmall.com",
+        "tbcache.com",
+        "tb.cn",
+        "alipay.com",
+        "alipay.cn",
+        "1688.com",
+        "goofish.com",
+        "amap.com",
+        "gaode.com"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/domestic/alibaba",
+        "upstream/domestic/amap"
+      ]
+    },
+    {
+      "service": "Alibaba international commerce and payments",
+      "policy": "PROXY",
+      "suffix": [
+        "aliexpress.com",
+        "aliexpress.ru",
+        "aliexpress-media.com",
+        "aestatic.net",
+        "ae-rus.net",
+        "aedns.ru",
+        "aeplatform.ru",
+        "lazada.com",
+        "alibaba.com",
+        "alipayplus.com",
+        "alipay.hk",
+        "alipaymo.com"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/domestic/alibaba",
+        "https://www.aliexpress.com/"
+      ]
+    },
+    {
+      "service": "Baidu mainland consumer services",
+      "policy": "DIRECT",
+      "suffix": [
+        "baidu.com",
+        "baidu.cn",
+        "bdimg.com",
+        "bdstatic.com",
+        "baidupcs.com",
+        "tieba.com",
+        "tiebaimg.com",
+        "hao123.com"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/domestic/baidu"
+      ]
+    },
+    {
+      "service": "Bilibili mainland",
+      "policy": "DIRECT",
+      "suffix": [
+        "bilibili.com",
+        "bilibili.cn",
+        "biliapi.com",
+        "biliapi.net",
+        "hdslb.com",
+        "acgvideo.com",
+        "b23.tv"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/domestic/bilibili",
+        "upstream/domestic/bilibili-cdn"
+      ]
+    },
+    {
+      "service": "Bilibili international",
+      "policy": "PROXY",
+      "suffix": [
+        "bilibili.tv",
+        "biliintl.com"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/domestic/bilibili"
+      ]
+    },
+    {
+      "service": "NetEase mainland mail and music",
+      "policy": "DIRECT",
+      "suffix": [
+        "163.com",
+        "126.com",
+        "126.net",
+        "163mail.com",
+        "188.com",
+        "yeah.net",
+        "music.163.com",
+        "music.126.net"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/domestic/netease"
+      ]
+    },
+    {
+      "service": "NetEase international",
+      "policy": "PROXY",
+      "suffix": [
+        "easebar.com"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/domestic/netease"
+      ]
+    },
+    {
+      "service": "Xiaomi mainland stores and international separated hosts",
+      "policy": "DIRECT",
+      "suffix": [
+        "xiaomi.cn",
+        "xiaomiyoupin.com",
+        "youpin.cn",
+        "xiaomiev.com"
+      ],
+      "exact": [
+        "www.mi.com.cn"
+      ],
+      "sources": [
+        "upstream/domestic/xiaomi"
+      ]
+    },
+    {
+      "service": "Xiaomi international (shared mi.com/xiaomi.com parents excluded)",
+      "policy": "PROXY",
+      "suffix": [],
+      "exact": [
+        "c.mi.com",
+        "global.market.xiaomi.com"
+      ],
+      "sources": [
+        "upstream/domestic/xiaomi"
+      ]
+    },
+    {
+      "service": "Huawei mainland stores",
+      "policy": "DIRECT",
+      "suffix": [
+        "vmall.com",
+        "vmallres.com",
+        "huawei.cn"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/domestic/huawei"
+      ]
+    },
+    {
+      "service": "Huawei international products (regional/shared login stays original)",
+      "policy": "PROXY",
+      "suffix": [
+        "petalmaps.com",
+        "petalmail.com",
+        "dbankcloud.ru"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/domestic/huawei"
+      ]
+    },
+    {
+      "service": "ByteDance IME confirmed shared hosts",
+      "policy": "DIRECT",
+      "suffix": [],
+      "exact": [
+        "ime.oceancloudapi.com",
+        "ime-gw.oceancloudapi.com",
+        "speech.bytedance.com",
+        "imagex.bytedanceapi.com",
+        "effect.snssdk.com",
+        "is.snssdk.com",
+        "crash.snssdk.com",
+        "pc-mon.zijieapi.com",
+        "tnc0-bjlgy.zijieapi.com",
+        "log-klink.zijieapi.com",
+        "rtlog.zijieapi.com",
+        "p0-ime-clip-private.byteimg.com",
+        "p0-ime-clip2-private.byteimg.com",
+        "lf-speechfe-cdn.bytespeech.com",
+        "lf3-static.bytednsdoc.com"
+      ],
+      "sources": [
+        "rules/ime_direct.json"
+      ]
+    },
+    {
+      "service": "Mainland public services and banks",
+      "policy": "DIRECT",
+      "suffix": [
+        "12306.cn",
+        "gov.cn",
+        "edu.cn",
+        "unionpay.com",
+        "unionpay.cn",
+        "icbc.com.cn",
+        "ccb.com",
+        "boc.cn",
+        "abchina.com",
+        "bankcomm.com",
+        "cmbchina.com",
+        "psbc.com"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/sr_direct_list.module"
+      ]
+    },
+    {
+      "service": "Google service supplements",
+      "policy": "PROXY",
+      "suffix": [
+        "dns.google",
+        "googleapis-cn.com",
+        "googleapps-cn.com",
+        "gstatic-cn.com",
+        "googleflights.net"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/proxy-services/google"
+      ]
+    },
+    {
+      "service": "Amazon international shopping",
+      "policy": "PROXY",
+      "suffix": [
+        "amazon.com",
+        "amazon.co.jp",
+        "amazon.co.uk",
+        "amazon.de",
+        "amazon.fr",
+        "amazon.it",
+        "amazon.es",
+        "amazon.ca",
+        "amazon.com.au",
+        "amazon.in",
+        "amazon.sg",
+        "amazon.ae",
+        "amazon.com.br",
+        "amazon.com.mx",
+        "media-amazon.com",
+        "images-amazon.com"
+      ],
+      "exact": [],
+      "sources": [
+        "https://www.amazon.com/"
+      ]
+    },
+    {
+      "service": "eBay international shopping",
+      "policy": "PROXY",
+      "suffix": [
+        "ebay.com",
+        "ebay.co.uk",
+        "ebay.de",
+        "ebay.fr",
+        "ebay.com.au",
+        "ebay.ca",
+        "ebay.co.jp",
+        "ebaystatic.com",
+        "ebayimg.com"
+      ],
+      "exact": [],
+      "sources": [
+        "https://www.ebay.com/"
+      ]
+    },
+    {
+      "service": "Temu international",
+      "policy": "PROXY",
+      "suffix": [
+        "temu.com",
+        "temu.net",
+        "temuimg.com",
+        "kwcdn.com"
+      ],
+      "exact": [],
+      "sources": [
+        "https://www.temu.com/"
+      ]
+    },
+    {
+      "service": "Rednote international",
+      "policy": "PROXY",
+      "suffix": [
+        "rednote.com",
+        "rednote.com.my",
+        "rednotecdn.com"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/domestic/xiaohongshu"
+      ]
+    },
+    {
+      "service": "JD mainland commerce (mixed company list not imported)",
+      "policy": "DIRECT",
+      "suffix": [
+        "jd.cn",
+        "jd.com.cn",
+        "jingdong.com",
+        "360buy.com",
+        "jdpay.com",
+        "jdcdn.com",
+        "jdcache.com",
+        "jingxi.com",
+        "jddj.com",
+        "api.m.jd.com"
+      ],
+      "exact": [
+        "jd.com",
+        "www.jd.com",
+        "m.jd.com"
+      ],
+      "sources": [
+        "upstream/domestic/jd"
+      ]
+    },
+    {
+      "service": "JD international commerce",
+      "policy": "PROXY",
+      "suffix": [
+        "joybuy.com",
+        "joybuy.es",
+        "jd.co.th",
+        "jd.id",
+        "jd.hk",
+        "jd.ru",
+        "joybuy.co.uk",
+        "joybuy.de",
+        "joybuy.fr",
+        "joybuy.nl",
+        "joy-sourcing.com"
+      ],
+      "exact": [],
+      "sources": [
+        "upstream/domestic/jd"
+      ]
+    },
+    {
+      "service": "Doubao mainland scoped hosts (Dola shares parent CDN)",
+      "policy": "DIRECT",
+      "suffix": [
+        "shurufa.doubao.com",
+        "api-normal.doubao.com",
+        "api.doubao.com",
+        "ime.doubao.com",
+        "frontier-audio-ime-quic.doubao.com",
+        "frontier-audio-ime-ws.doubao.com",
+        "frontier-ime.doubao.com",
+        "doubaocdn.com"
+      ],
+      "exact": [
+        "doubao.com",
+        "www.doubao.com"
+      ],
+      "sources": [
+        "rules/ime_direct.json",
+        "rules/domain_evidence.json",
+        "upstream/bytedance/doubao"
+      ]
+    },
+    {
+      "service": "Confirmed mainland Feishu CDN host",
+      "policy": "DIRECT",
+      "suffix": [],
+      "exact": [
+        "sf3-scmcdn-cn.feishucdn.com"
+      ],
+      "sources": [
+        "rules/domain_evidence.json"
+      ]
+    },
+    {
+      "service": "International ByteDance public resource hosts",
+      "policy": "PROXY",
+      "suffix": [
+        "traecdn.us"
+      ],
+      "exact": [
+        "bytegate.byteintlapi.com",
+        "sf16-short-sg.bytedapm.com"
+      ],
+      "sources": [
+        "rules/domain_evidence.json"
+      ]
+    }
+  ],
+  "intentional_overlaps": [
+    {
+      "proxy": "DOMAIN,wetv.qq.com",
+      "direct": "DOMAIN-SUFFIX,qq.com",
+      "reason": "WeTV international exact host precedes mainland QQ suffix"
+    }
+  ]
+}
